@@ -1,0 +1,101 @@
+/* Website display */
+body {
+    margin: 35px; /* Remove default margin */
+    height: 100vh;
+    background-color: #2f2239;
+    overflow: hidden; /* Hide overflow */
+    cursor: crosshair; /* Crosshair cursor */
+    position: relative; /* Relative positioning for the body */
+   }
+
+/* Butterfly cursor */
+.butterfly  {
+    position: fixed; /* Absolute positioning for the cursor */ 
+    width: 40px; /* Width of the cursor */
+    height: 40px; /* Height of the cursor */
+    background-size: cover; /* Cover the entire area */
+    background-repeat: no-repeat; /* No repeat */
+    pointer-events: none; /* So it doesn't interfere with clicks */
+    z-index: 9999; /* On top of everything else */
+    transform: translate(25%, 25%); /* Center the cursor */
+    transition: top 0.1s linear, left 0.1s linear; /* Smooth movement */
+    border-radius: 25px; /* Rounded corners */
+    border: 1px, solid white; /* White border */
+  }
+
+.butterfly-image {
+    animation: flap 0.5s ease-in-out infinite; /* Flap animation */
+    width: 100%; /* Width of the cursor */
+    height: 100%; /* Height of the cursor */
+    object-fit: contain; /* Maintain aspect ratio */
+    opacity: 0.75; /* Slightly transparent */
+  
+  }
+  @keyframes flap {
+    0%, 100% {
+      transform: rotate(0deg) scale(1);
+    }
+    50% {
+      transform: rotate(10deg) scale(1.05);
+    }
+
+  }
+
+
+/*Logo appearance  */
+.logo-image {
+    position: absolute; /* Absolute positioning for the logo */
+    top: 20px; /* Distance from the top */
+    left: 15px; /* Distance from the right */
+    width: 110px;
+    height: 100px;
+    object-fit: cover; /* Maintain ratio */
+    border-radius: 10px; /* Rounded corners for the logo */
+  }
+
+/* Contact button placement */
+.contact-container {
+    position: relative; /* Relative positioning for the container */
+  }
+
+
+/* Contact button appearance */
+.contact-button {
+    position: fixed; /* Fixed position for the button */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    background-color: #8FBC8F;
+    color: #2F4F4F;
+    font-family: Georgia serif;
+    font-size: 22px;
+    font-weight: bold;
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for the button */   
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Align items in the center */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 175px; /* Width of the button */
+    height: 45px; /* Height of the button */
+    margin: 5px 0px; /* Margin around the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+  }
+
+/* Contact button hover effect */
+.contact-button:hover {
+    background-color: #2F4F4F; /* Darker background on hover */
+    color: #8FBC8F; /* Lighter text on hover */
+  }
+
+/* Personal portfolio picture position */
+.portfolio-image {
+    position: absolute; /* Absolute positioning for the image */
+    top: 25%; /* Distance from the top */
+    left: 50%; /* Centered horizontally */
+    transform: translateX(-50%); /* Center the image */
+    width: 650px; /* Width of the image */
+    height: 650px; /* Height of the image */
+    object-fit: cover; /* Maintain aspect ratio */
+  }
