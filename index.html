@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Portfolio</title>
    <link rel="stylesheet" href="./styles.css">
+
+   <!-- Put this in your <head> tag -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
  </head>
 
 <body>
@@ -15,32 +19,89 @@
     <img src="purple_butterfly.png" alt="Butterfly" class="butterfly-image">
   </div>
 
-  <script>
-     document.addEventListener('DOMContentLoaded', () => {
-      const butterfly = document.getElementById('butterfly'); 
-    
-    document.addEventListener('mousemove', (e) => {
-      butterfly.style.left = `${e.pageX}px`;
-      butterfly.style.top = `${e.pageY}px`;
-      butterfly.style.animation = 'flap 0.3s infinite, fly 1s infinite';
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const butterfly = document.getElementById('butterfly'); 
+        
+        document.addEventListener('mousemove', (e) => {
+          butterfly.style.left = `${e.pageX}px`;
+          butterfly.style.top = `${e.pageY}px`;
 
-    });
-  });
-  </script>
+        });
+      });
+    </script>
+
 
   <div class="logo-container">
     <img src="dezzieloops.png" alt="Logo" class="logo-image">
   </div>
 
+
   <div class="contact-container">
-    <button class="contact-button">My Contact</button>
+    <button class="contact-button">Contact Me</button>
   </div>
 
+
+  <!-- Contain links in the center -->
+  <div class="header-container">
+
+    <!-- Navigation links -->
+    <div class="nav-container">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About Me</a>
+      <a href="#projects" class="nav-link">Projects</a>
+    </div>
+
+
+    <!-- Social Media Icons -->
+    <div class="social-media-container">
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/tamara-etaremi-zuokumor-a86950293" class="social-icon" target="_blank">
+        <i class="fa-brands fa-linkedin fa-bounce" style="font-size: 2rem; color: #b4abcf;"></i>
+      </a>
+    
+      <!-- GitHub -->
+      <a href="https://github.com/Dezziezuok" class="social-icon" target="_blank">
+        <i class="fa-brands fa-github fa-flip" style="font-size: 2rem; color: #b4abcf;"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Portfolio image -->
   <div class="portfolio-container">
     <img src="realportfolioimage.png" alt="Portfolio Image" class="portfolio-image">
   </div>
 
 
+ <!-- Content Me footer at bottom of page-->
+ <footer class="footer">
+  <div class="footer-content">
+    <img src="dezzieloops.png" alt="Logo" class="footer-logo">
+    
+    <p class="footer-text">
+      Feel free to contact and connect with me <br>
+      through my social media platforms!
+    </p>
+
+    <!-- link email -->
+    <a href="mailto:tdzuokumor@crimson.ua.edu" class="email-link">
+      <i class="fa fa-envelope" style="font-size: 18px; color: #b4abcf;"></i>
+      tdzuokumor@crimson.ua.edu
+    </a>
+    
+  </div>
+</footer>
+
+<!-- Mobile Device message -->
+<div class="mobile-message">
+  <p>Sorry, this site is best viewed on a larger screen. 😊</p>
+</div>
+
+
+
+ 
+  
 
   <script src="script.js"></script>
 </body>

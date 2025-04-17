@@ -1,12 +1,16 @@
 /* Website display */
 body {
-    margin: 35px; /* Remove default margin */
+    margin: 15px; /* Margin around the body */
     height: 100vh;
     background-color: #2f2239;
-    overflow: hidden; /* Hide overflow */
+    overflow-y: auto; /* Vertical scroll bar */
+    overflow-x: hidden; /* No horizontal scroll bar */
     cursor: crosshair; /* Crosshair cursor */
     position: relative; /* Relative positioning for the body */
-   }
+    flex-direction: column; /* Column layout */
+    }
+  
+   
 
 /* Butterfly cursor */
 .butterfly  {
@@ -17,10 +21,10 @@ body {
     background-repeat: no-repeat; /* No repeat */
     pointer-events: none; /* So it doesn't interfere with clicks */
     z-index: 9999; /* On top of everything else */
-    transform: translate(25%, 25%); /* Center the cursor */
+    transform: translate(25%, 25%); /* Bottom right corner */
     transition: top 0.1s linear, left 0.1s linear; /* Smooth movement */
     border-radius: 25px; /* Rounded corners */
-    border: 1px, solid white; /* White border */
+    border: 1px solid white; /* White border */
   }
 
 .butterfly-image {
@@ -28,9 +32,10 @@ body {
     width: 100%; /* Width of the cursor */
     height: 100%; /* Height of the cursor */
     object-fit: contain; /* Maintain aspect ratio */
-    opacity: 0.75; /* Slightly transparent */
+    opacity: 0.65; /* Slightly transparent */
   
   }
+
   @keyframes flap {
     0%, 100% {
       transform: rotate(0deg) scale(1);
@@ -45,12 +50,12 @@ body {
 /*Logo appearance  */
 .logo-image {
     position: absolute; /* Absolute positioning for the logo */
-    top: 20px; /* Distance from the top */
     left: 15px; /* Distance from the right */
-    width: 110px;
+    width: 100px;
     height: 100px;
     object-fit: cover; /* Maintain ratio */
     border-radius: 10px; /* Rounded corners for the logo */
+    margin-top: 15px; /* Distance from the top */
   }
 
 /* Contact button placement */
@@ -63,7 +68,7 @@ body {
 .contact-button {
     position: fixed; /* Fixed position for the button */
     top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
+    right: 15px; /* Distance from the right */
     background-color: #8FBC8F;
     color: #2F4F4F;
     font-family: Georgia serif;
@@ -89,6 +94,7 @@ body {
     color: #8FBC8F; /* Lighter text on hover */
   }
 
+
 /* Personal portfolio picture position */
 .portfolio-image {
     position: absolute; /* Absolute positioning for the image */
@@ -99,3 +105,153 @@ body {
     height: 650px; /* Height of the image */
     object-fit: cover; /* Maintain aspect ratio */
   }
+
+
+/* Center buttons */
+.header-container {
+  display: flex; /* Flexbox for alignment */
+  justify-content: center;
+  gap: 25px; /* Space between buttons */
+  }
+
+.nav-container {
+    font-family: Georgia serif;
+    font-size: 22px;
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    gap: 40px; /* Space between buttons */
+    margin-top: 30px; /* Margin from the top */ 
+    border: none; /* No border */
+  }
+   
+  .nav-link {
+    text-decoration: none;
+    color: #b4abcf;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Distance under the text */
+    width: 0;
+    height: 1.5px;
+    bottom: -3px; /* Distance under the text */
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+
+  /* Social media attributes */
+  .social-media-container {
+    display: flex;
+    gap: 12px;
+    justify-content: center; /* Center the icons */
+    margin-top: 25px; /* Margin from the top */
+  }
+  
+  .social-icon i  {
+    font-size: 2rem;
+    border: 3px solid #b4abcf; /* White border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px; /* Padding for the icon */
+    transition: transform 0.5s ease;
+  }
+  
+  .social-icon:hover i {
+    transform: scale(1.2);
+    background-color: white; /* White background on hover */
+    
+    }
+
+
+  /* Hide contents on small screen */
+  @media (max-width: 768px) {
+    .header-container,
+    .nav-container,
+    .social-media-container {
+      display: none;
+    }
+  }
+
+  /* The Contact Me paragraph */
+
+  /* Placement on tabs */
+  
+  .main-content {
+    flex: 1; /* Fills the remaining space to push footer down */
+  }
+
+  .footer {
+    background-color: #2f2239;
+    color: white;
+    text-align: center; /* Center the text */
+    padding: 30px 10px; /* Padding for the footer */
+    font-family: Georgia serif;  /* Font family for the footer */
+    width: 100%; /* Full width */
+  }
+  
+  .footer-content {
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center items horizontally */
+    gap: 10px; /* Space between items */
+  }
+  
+  .footer-logo {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .footer-text,
+  .email-contents {
+    font-family: Georgia serif;  /* Font family for the footer */
+    font-size: 16px;
+    margin: 0;
+  }
+  .email-link {
+    font-family: Georgia serif;
+    color: #b4abcf;         /* Your preferred color */
+    text-decoration: none;  /* Remove underline */
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: underline; /* Optional: underline on hover */
+  }
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  /* Mobile device message */
+  .mobile-message {
+    display: none;
+    color: #b4abcf;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-message {
+      display: block;
+    }
+  }
+  
+ 
