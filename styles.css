@@ -10,7 +10,6 @@ body {
     position: relative; /* Relative positioning for the body */
     display: flex; /* Flexbox for alignment */
     flex-direction: column; /* Column layout */
-    }
 
     html {
       margin: 0;
@@ -30,8 +29,38 @@ body {
     main {
       flex: 1; /* Fills the remaining space to push footer down */
     }
+
+    /* Page features */
+
+    h1 {
+      font-family: Georgia MT ; /* Font family for the title */
+      font-weight: bold; /* Bold font weight */
+      font-size: 40px; /* Font size for the title */
+      color: #b4abcf; /* Color for the title */
+      text-align: center; /* Center the text */
+      margin-top: 20px; /* Margin from the top */
+    }
+    
   
-   
+    h2 {
+      font-family: Georgia serif; /* Font family for the header */
+      font-weight: bold; /* Bold font weight */
+      font-size: 36px; /* Font size for the header */
+      color: #b4abcf; /* Color for the header */
+      text-align: center; /* Center the text */
+      margin-top: 20px; /* Margin from the top */
+    }
+
+    }
+
+    p {
+      font-family: Georgia serif; /* Font family for the subheader */
+      font-size: 16px; /* Font size for the subheader */
+      color: white; /* Color for the subheader */
+      text-align: center; /* Center the text */
+      margin-top: 20px; /* Margin from the top */
+    }
+
 
   /* Butterfly cursor */
   .butterfly  {
@@ -67,6 +96,26 @@ body {
 
     }
 
+    /* Home page Desirae part */
+    #home {
+      text-align: center; /* Center the content inside the container */
+    }
+
+    .home-header, .name, h1 {
+      display: inline; /* Makes the elements appear on the same line */
+      text-align: center; /* Center the text */
+    }
+
+    .name {
+      font-family: Georgia MT ; /* Font family for the title */
+      font-weight: bold; /* Bold font weight */
+      font-size: 40px; /* Font size for the title */
+      text-align: center; /* Center the text */
+      margin-top: 20px; /* Margin from the top */
+      color: white; /* You can change this to any color you want */
+    }
+    
+
 
   /*Logo appearance  */
   .logo-image {
@@ -76,7 +125,7 @@ body {
       height: 100px;
       object-fit: cover; /* Maintain ratio */
       border-radius: 10px; /* Rounded corners for the logo */
-      margin-top: 15px; /* Distance from the top */
+      margin-top: 15px !important; /* Distance from the top */
     }
 
   /* Contact button placement */
@@ -111,7 +160,7 @@ body {
   /* Contact button hover effect */
   .contact-button:hover {
       background-color: #2F4F4F; /* Darker background on hover */
-      color: #8FBC8F; /* Lighter text on hover */
+      color: #F0FFF0; /* Lighter text on hover */
       text-decoration: none; /* Remove underline */
     }
 
@@ -125,6 +174,7 @@ body {
       width: 650px; /* Width of the image */
       height: 650px; /* Height of the image */
       object-fit: cover; /* Maintain aspect ratio */
+      z-index: -9999; /* Behind everything else */
     }
 
 
@@ -259,6 +309,10 @@ body {
       font-size: 16px;
       text-decoration: underline; /* Optional: underline on hover */
       cursor: pointer;
+    }
+
+    .email-link:hover {
+      color: white; /* Change color on hover */
     }
 
 
