@@ -1,7 +1,17 @@
 /* Website display */
 
+*{
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-family: Georgia, sans-serif; /* Font family for the entire page */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+
+
+  /* Body attributes */
 body {
-    margin: 15px; /* Margin around the body */
+    width: 100%; /* Full width of the viewport */
     height: 100%; /* Full height of the viewport */
     background-color: #2f2239 !important;
     overflow-y: auto; /* Vertical scroll bar */
@@ -10,6 +20,7 @@ body {
     position: relative; /* Relative positioning for the body */
     display: flex; /* Flexbox for alignment */
     flex-direction: column; /* Column layout */
+    
 
     html {
       margin: 0;
@@ -18,6 +29,7 @@ body {
       background-color: #2f2239; /* this ensures full-page background */
       scroll-behavior: smooth; /* Smooth scrolling */
     }
+
 
     /* Placement on tabs */
     .page-container {
@@ -35,7 +47,7 @@ body {
     h1 {
       font-family: Georgia MT ; /* Font family for the title */
       font-weight: bold; /* Bold font weight */
-      font-size: 40px; /* Font size for the title */
+      font-size: 56px; /* Font size for the title */
       color: #b4abcf; /* Color for the title */
       text-align: center; /* Center the text */
       margin-top: 20px; /* Margin from the top */
@@ -45,7 +57,7 @@ body {
     h2 {
       font-family: Georgia serif; /* Font family for the header */
       font-weight: bold; /* Bold font weight */
-      font-size: 36px; /* Font size for the header */
+      font-size: 48px; /* Font size for the header */
       color: #b4abcf; /* Color for the header */
       text-align: center; /* Center the text */
       margin-top: 20px; /* Margin from the top */
@@ -109,7 +121,7 @@ body {
     .name {
       font-family: Georgia MT ; /* Font family for the title */
       font-weight: bold; /* Bold font weight */
-      font-size: 40px; /* Font size for the title */
+      font-size: 60px; /* Font size for the title */
       text-align: center; /* Center the text */
       margin-top: 20px; /* Margin from the top */
       color: white; /* You can change this to any color you want */
@@ -120,12 +132,12 @@ body {
   /*Logo appearance  */
   .logo-image {
       position: absolute; /* Absolute positioning for the logo */
-      left: 15px; /* Distance from the right */
+      top: 20px; /* Margin from the top */
+      left: 20px; /* Distance from the right */
       width: 100px;
       height: 100px;
       object-fit: cover; /* Maintain ratio */
       border-radius: 10px; /* Rounded corners for the logo */
-      margin-top: 15px !important; /* Distance from the top */
     }
 
   /* Contact button placement */
@@ -137,15 +149,15 @@ body {
   /* Contact button appearance */
   .contact-button {
       position: fixed; /* Fixed position for the button */
-      top: 20px; /* Distance from the top */
-      right: 15px; /* Distance from the right */
+      top: 20px; /* Margin from the top */
+      right: 20px; /* Distance from the right */
       background-color: #8FBC8F;
       color: #2F4F4F;
       font-family: Georgia serif;
       font-size: 22px;
       font-weight: bold;
       border: none; /* No border */
-      padding: 10px 15px; /* Padding for the button */   
+      padding: 5px; /* Padding for the button */   
       text-align: center; /* Center the text */
       text-decoration: none; /* Remove underline */
       display: flex; /* Align items in the center */
@@ -166,16 +178,14 @@ body {
 
 
   /* Personal portfolio picture position */
-  .portfolio-image {
-      position: absolute; /* Absolute positioning for the image */
-      top: 25%; /* Distance from the top */
-      left: 50%; /* Centered horizontally */
-      transform: translateX(-50%); /* Center the image */
-      width: 650px; /* Width of the image */
-      height: 650px; /* Height of the image */
-      object-fit: cover; /* Maintain aspect ratio */
-      z-index: -9999; /* Behind everything else */
-    }
+  .portfolio-container {
+    margin-top: 75px; /* Margin from the top */
+    width: 750px;
+    height: 675px;
+    background-image: url('realportfolioimage.png'); /* Background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+  }
 
 
   /* Center buttons */
@@ -208,9 +218,9 @@ body {
       content: "";
       position: absolute;
       left: 0;
-      bottom: 5px; /* Distance under the text */
+      bottom: -3px; /* Distance under the text */
       width: 0;
-      height: 1.25px;
+      height: 1.4px;
       background-color: white;
       transition: width 0.25s ease-in-out;
     }
@@ -225,17 +235,16 @@ body {
     }
 
 
-    /* Social media attributes */
-    .social-media-container {
-      display: flex;
-      gap: 12px;
-      justify-content: center; /* Center the icons */
-      margin-top: 25px; /* Margin from the top */
+      /* social media icon attributes */
+    .socials-container {
+      display: flex; /* Flexbox for alignment */
+      justify-content: center; /* Center items horizontally */
+      gap: 12.5px; /* Space between icons */
     }
-    
+
     .social-icon i  {
       font-size: 2rem;
-      border: 3px solid #b4abcf; /* White border */
+      border: 2px solid #b4abcf; /* White border */
       border-radius: 10px; /* Rounded corners */
       padding: 5px; /* Padding for the icon */
       transition: transform 0.5s ease;
@@ -247,8 +256,30 @@ body {
       color:white; /* White color on hover */
       
       }
-
-
+    
+    
+      /* social media icon attributes in menu*/
+      .socials-container {
+        display: flex; /* Flexbox for alignment */
+        justify-content: center; /* Center items horizontally */
+        gap: 12.5px; /* Space between icons */
+      }
+  
+      .social-icon i  {
+        font-size: 2rem;
+        border: 2px solid #b4abcf; /* White border */
+        border-radius: 10px; /* Rounded corners */
+        padding: 5px; /* Padding for the icon */
+        transition: transform 0.5s ease;
+      }
+      
+      .social-icon:hover i {
+        transform: scale(1.2);
+        background-color: white; /* White background on hover */
+        color:white; /* White color on hover */
+        
+      }
+    
     /* Hide contents on small screen */
     @media (max-width: 768px) {
       .header-container,
@@ -257,6 +288,121 @@ body {
         display: none;
       }
     }
+
+
+  /* picture near the home section */
+  .portfolio-image {
+    justify-content: center; /* Center the image */
+    width: 550px; /* Full width of the container */
+    height: 500px; /* Full height of the container */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners for the image */
+    flex-basis: 35%; /* Take up 35% of the container width */
+    
+  }
+
+    /* Home section attributes */
+    #home {
+      padding: 80px 0 ; /* Padding for the home section */
+      color: white; /* Text color */
+    }
+
+    .home-container {
+      display: flex; /* Flexbox for alignment */
+      justify-content: space-around; /* Space between items */
+      flex-wrap: wrap; /* Wrap items to the next line if needed */
+    }
+
+
+    /* About me section attributes */
+    #about-me {
+      padding: 80px 0; /* Padding for the about me section */
+      color: white; /* Text color */
+    }
+
+    .aboutme-container {
+      display: flex; /* Flexbox for alignment */
+      justify-content: space-around; /* Space between items */
+      flex-wrap: wrap; /* Wrap items to the next line if needed */
+    }
+
+    .moreaboutme {
+      justify-content: space-around; /* Center items horizontally */
+      gap: 35px; /* Space between items */
+      margin-top: 20px; /* Margin from the top */
+      flex-wrap: wrap; /* Wrap items to the next line if needed */
+    }
+
+    .aboutme-section {
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+      gap: 35px; /* Space between items */
+      flex-wrap: wrap; /* Wrap items to the next line if needed */
+    }
+
+  
+
+
+    /* About me tabs attributes */
+    .aboutme-tabs {
+      display: flex; /* Flexbox for alignment */
+      gap: 35px; /* Space between tabs */
+      margin-top: 15px; /* Margin from the top */
+    }
+
+    .aboutme-links {
+      font-size : 20px; /* Font size for the tabs */
+      font-family: Georgia serif; /* Font family for the tabs */
+      font-weight: bold; /* Bold font weight */
+      color: #b4abcf; /* Color for the tabs */
+      text-decoration: none; /* Remove underline */
+      position: relative; /* Position for the underline effect */
+      cursor: pointer;
+    }
+
+    .aboutme-links::after {
+      content: ""; /* Empty content for the underline */
+      width: 0; /* Initial width of the underline */
+      height: 2px; /* Height of the underline */
+      background-color: white; /* Color of the underline */
+      position: absolute; /* Positioning for the underline */
+      left: 0; /* Position from the left */
+      bottom: -2px; /* Position from the bottom */
+      transition: width 0.3s ease; /* Transition for the underline effect */
+    }
+
+   .aboutme-links.active-link::after {
+      width: 75%; /* Full width of the underline when active */
+    }
+
+    .aboutme-contents ul li {
+      list-style: none; /* Remove bullet points */
+      margin: 10px 0; /* Margin from the top */
+      color: white; /* Text color */
+      font-family: Georgia serif; /* Font family for the list items */
+      font-size: 12px; /* Font size for the list items */
+    }
+
+    .aboutme-contents ul li span {
+      text-decoration: none; /* Remove underline */
+      color: #b4abcf; /* Color for the links */
+      font-family: Georgia serif; /* Font family for the links */
+      font-size: 14px; /* Font size for the links */
+      font-weight: bold; /* Bold font weight */
+    }
+
+    .aboutme-contents {
+      display: none; /* Hide all contents by default */
+    }
+    .aboutme-contents.active-tab {
+      display: block; /* Show the active tab content */
+    }
+
+
+
+  
+
+
 
 
 
@@ -271,7 +417,6 @@ body {
 
 
     /* The Contact Me paragraph */
-
 
     .footer {
       background-color: #2f2239;
@@ -290,9 +435,15 @@ body {
     }
     
     .footer-logo {
-      width: 75px;
+      width: 100px;
       height: auto;
       border-radius: 10px;
+    }
+
+    .social-media-footer {
+      display: flex; /* Flexbox for alignment */
+      justify-content: center; /* Center items horizontally */
+      gap: 5px; /* Space between icons */
     }
     
     .footer-text,
@@ -314,6 +465,50 @@ body {
     .email-link:hover {
       color: white; /* Change color on hover */
     }
+
+
+    /* Message box details */
+    .input-container {
+      margin: 20px; /* Margin from the top */
+      text-align: center;
+    }
+    
+    .text-box {
+      padding: 5px;
+      width: 250px;
+      border-radius: 8px;
+      font-family: Georgia serif;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+    
+    /* Submission details */
+    .submit-button {
+      background-color: #8FBC8F; /* Button color */
+      color: #2F4F4F; /* Text color */
+      font-family: Georgia serif;
+      font-size: 18px;
+      font-weight: bold;
+      border: none; /* No border */
+      padding: 5px 15px; /* Padding for the button */
+      text-align: center; /* Center the text */
+      text-decoration: none; /* Remove underline */
+      display: inline-block; /* Inline block for the button */
+      cursor: pointer; /* Pointer cursor on hover */
+      border-radius: 5px; /* Rounded corners */
+      margin-top: 10px; /* Margin from the top */
+      
+    }
+
+    .submit-button:hover {
+      background-color: #2F4F4F; /* Darker background on hover */
+      color: #F0FFF0; /* Lighter text on hover */
+      text-decoration: none; /* Remove underline */
+    }
+      
+  
+    
 
 
     

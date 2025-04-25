@@ -4,14 +4,13 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-   <!-- Bootstrap 4 page fluidity -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-   <link rel="stylesheet" href="./styles.css">
+  <title>Personal Portfolio Website</title>
+  <link rel="stylesheet" href="./styles.css">
 
    <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" >
 
 </head>
 
@@ -52,71 +51,136 @@
       <!-- Contain links in the center -->
       <div class="header-container">
 
-        <!-- Navigation links -->
-        <div class="nav-container">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About Me</a>
-          <a href="#projects" class="nav-link">Projects</a>
-        </div>
-
-
-        <!-- Social Media Icons -->
-        <div class="social-media-container">
-
-          <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/tamara-etaremi-zuokumor-a86950293" class="social-icon" target="_blank">
-            <i class="fa-brands fa-linkedin fa-bounce" style="font-size: 2rem; color: #b4abcf;"></i>
-          </a>
+          <!-- Navigation links -->
+          <div class="nav-container">
+              <a href="#home" class="nav-link">Home</a>
+              <a href="#about" class="nav-link">About Me</a>
+              <a href="#projects" class="nav-link">Projects</a>
+              <a href="#services" class="nav-link">Services</a>
+              <div class="socials-container">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/tamara-etaremi-zuokumor-a86950293" class="social-icon" target="_blank">
+                  <i class="fa-brands fa-linkedin fa-bounce" style="font-size: 2rem; color:#b4abcf"></i>
+                </a>
+              
+                <!-- GitHub -->
+                <a href="https://github.com/Dezziezuok" class="social-icon" target="_blank">
+                  <i class="fa-brands fa-github fa-flip" style="font-size: 2rem; color: #b4abcf;"></i>
+                </a>
+              </div>
+          </div>
         
-          <!-- GitHub -->
-          <a href="https://github.com/Dezziezuok" class="social-icon" target="_blank">
-            <i class="fa-brands fa-github fa-flip" style="font-size: 2rem; color: #b4abcf;"></i>
-          </a>
-        </div>
-      </div>
+     </div>
+     <!-- Portfolio image -->
+     <div class="portfolio-container"></div>
 
-      <!-- Portfolio image -->
-      <div class="portfolio-container">
-        <img src="realportfolioimage.png" alt="Portfolio Image" class="portfolio-image">
-      </div>
+
 
       <!-- Home section -->
       <div class="home-container" id="home">
-        <h1 class="home-header">Hi, I'm </h1>
-        <h1 class="name">Desirae </h1>
-          <h1>an <br> Electrical Engineering and
-          <br> Computer Science Student</h1>
-        <p class="home-text">
-          As an Electrical Engineering Major with a CS Minor, I am passionate about bringing hardware 
-          <br>and software together to build innovative, user-centered systems. I’m especially into AI,
-          <br>Machine Learning, and anything that helps humans and machines interact more naturally.
-          <br><br>
-          Right now, I’m doing undergrad research with the Human Technology Interaction Lab at the 
-          <br>University of Alabama, working on ways to pair machine learning and hardware to recognize 
-          <br>human gestures and movements. 
-          <br><br>
-          I am Always learning, always creating, and always up for a challenge that pushes boundaries.
-          <br><br><br>
-        </p>
+        <div class="home-text-container">
+          <div class="home-header">
+            <p>Software Engineer/ Electrical Designer</p>
+            <h1 class="introduction">Hi, I'm </h1>
+            <h1 class="name">Desirae </h1>
+              <h1>an <br> Electrical Engineering and
+              <br> Computer Science Student</h1>
+          </div>
+            <p class="home-text">
+              As an Electrical Engineering Major with a CS Minor, I am passionate about bringing hardware 
+              <br>and software together to build innovative, user-centered systems. I’m especially into AI,
+              <br>Machine Learning, and anything that helps humans and machines interact more naturally.
+              <br><br>
+              Currently, I’m doing undergrad research with the Human Technology Interaction Lab at the 
+              <br>University of Alabama, working on ways to pair machine learning and hardware to recognize 
+              <br>human gestures and movements. 
+              <br><br>
+              I am always learning, always creating, and always up for a challenge that pushes boundaries.
+              <br><br><br>
+            </p>
+        </div>
+        <!-- image next to home section -->
+        <div class="home-image">
+          <img src="realportfolioimage.png" alt="Portfolio" class="portfolio-image">
+        </div>
+      </div>
 
+      
       <!-- About me section -->
-      <div class="AboutMe-container" id="about">
-        <h2 class="about-me-header"> More About Me</h2>
-        <p class="about-me-text">
-          I'm an aspiring software engineer, but beyond the screen, at the heart of everything I do is my 
-          <br>faith. As a Christian and Nigerian-American, I carry a strong sense of resilience, and purpose, 
-          <br>rooted in faith, cultivated by culture, and driven by desire to make meaningful impacts.
-          <br><br>
-          When I’m not buried under books or writing code, you’ll probably find me crocheting something
-          <br>cozy, getting a good workout in at the gym, fine-tuning my budget (yes, I <i>genuinely</i> enjoy it), or
-          <br> indulging in a little visual inspiration as I scroll through Pinterest. I believe in being
-          <br>intentional, showing grit, and finding connections and joy in all that I do.
-          <br><br>Hence the correlation between coding and crocheting loops— both require creativity, patience, 
-          <br>and a love for building something meaningful, one stitch or line at a time.
-          <br><br><br>
+      <div class="aboutme-container" id="about">
+        <div class="moreaboutme">
+            
+            <h2 class="about-me-header"> More About Me</h2>
+            <p class="about-me-text">
+              I'm an aspiring software engineer, but beyond the screen, at the heart of everything I do is my 
+              <br>faith. As a Christian and Nigerian-American, I carry a strong sense of resilience, and purpose, 
+              <br>rooted in faith, cultivated by culture, and driven by the desire to make meaningful impacts.
+              <br><br>
+              When I’m not buried under books or writing code, you’ll probably find me crocheting something
+              <br>cozy, getting a good workout in at the gym, fine-tuning my budget (yes, I <i>genuinely</i> enjoy it), or
+              <br> indulging in a little visual inspiration as I scroll through Pinterest. I believe in being
+              <br>intentional, showing grit, and finding connections and joy in all that I do.
+              <br><br>Hence the correlation between coding and crocheting loops— both require creativity, patience, 
+              <br>and a love for building something meaningful, one stitch or line at a time.
+              <br><br><br>
+            </p>
+          <div class="aboutme-section">
+    
+            <div class="aboutme-tabs">
+              <p class="aboutme-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="aboutme-links" onclick="opentab('education')">Education</p>  
+              <p class="aboutme-links" onclick="opentab('experience')">Experience</p>
+            </div>
+            <div class="aboutme-contents active-tab" id="skills">
+              <ul>
+                <li>Python</li>
+                <li>C++</li>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+          </div>
+            <div class="aboutme-contents" id="education">
+              <ul>
+                <li><span>Attend</span><br> The University of Alabama</li>
+                <li><span>Where?</span><br>Tuscaloosa, Alabama</li>
+                <li><span>Major</span><br>Electrical Engineering</li>
+                <li><span>Minor</span><br>Computer Science</li>
+              </ul>
+            </div>
+            <div class="aboutme-contents" id="experience">
+              <ul>
+                <li><span>Work</span><br> Jordan & Skala </li>
+                <li><span>Role</span><br>Software Development Intern</li>
+                <li><span>When</span><br>August 2024 - December 2024</li>
+                <li>Optimized electrical design processes by applying MEP best<br>
+                  practices, improving workflows, and conducting accurate panel<br>
+                  board calculations. Enhanced technical skills in AutoCAD and <br>
+                  Revit, ensured code compliance through COMcheck submissions, <br>
+                  and bridged communication between technical and non-technical <br>
+                  teams to support successful project execution.</li>
+              </ul>
+        </div>
+      </div>
+      <script>
+        var aboutme_links = document.getElementsByClassName("aboutme-links");
+        var aboutme_contents = document.getElementsByClassName("aboutme-contents");
+        
+        function opentab(tabname) {
+          for(aboutme_link of aboutme_links) {
+            aboutme_link.classList.remove("active-link");
+          }
+          for(aboutme_content of aboutme_contents) {
+            aboutme_content.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
 
-
-        </p>
+        }
+      </script>
 
       <!-- Projects section -->
 
@@ -130,6 +194,15 @@
         </p>
       </div>
 
+      <!-- Services Icon -->
+
+      <div class="services-container" id="services">
+        <h2 class="services-header">Services</h2>
+        <p class="services-text">
+          Here are some of the services I offer: 
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </p>
+
     </main>
 
 
@@ -137,27 +210,60 @@
     <!-- Content Me footer at bottom of page-->
     <footer class="footer" id="contact">
       <div class="footer-content">
+        <h2 class="footer-header">Get In Touch</h2>
+        <br>
         <img src="dezzieloops.png" alt="Logo" class="footer-logo">
-        
+        <br>
         <p class="footer-text">
           Feel free to contact and connect with me <br>
           through my social media platforms!
         </p>
 
+        <!-- socials linked in footer -->
+        <div class="social-media-footer">
+
+          <!-- Pinterest -->
+          <a href="https://www.pinterest.com/dezzie128/" class="social-icon" target="_blank">
+            <i class="fa-brands fa-pinterest fa-beat-fade" style="font-size: 1rem; color: #b4abcf;"></i>
+          </a>
+          
+         <!-- LinkedIn -->
+         <a href="https://www.linkedin.com/in/tamara-etaremi-zuokumor-a86950293" class="social-icon" target="_blank">
+          <i class="fa-brands fa-linkedin fa-bounce" style="font-size: 1rem; color: #b4abcf;"></i>
+         </a>
+      
+        <!-- GitHub -->
+         <a href="https://github.com/Dezziezuok" class="social-icon" target="_blank">
+          <i class="fa-brands fa-github fa-flip" style="font-size: 1rem; color: #b4abcf;"></i>
+         </a>
+         <br>
+        </div>
+        
         <!-- link email -->
         <a href="mailto:tdzuokumor@crimson.ua.edu" class="email-link">
           <i class="fa fa-envelope" style="font-size: 18px; color: #b4abcf;"></i>
           tdzuokumor@crimson.ua.edu
         </a>
+
+
+        <!-- Message box for quick chats -->
+        <div class="input-container">
+          <input type="text" id="message" class="text-box" placeholder=" what's your favorite color? ">
+        </div>
+        <!-- Submission button -->
+        <div class="submit-container">
+          <button class="submit-button" onclick="window.location.href='https://www.thepioneerwoman.com/just-for-fun/g60793573/what-your-favorite-color-says-about-you/'">
+            submit
+          </button>
+        </div>
         
+         <br><br><br><br>
+        </div>
+
       </div>
     </footer>
   </div>
 
-<!-- Mobile Device message -->
-<div class="mobile-message">
-  <p>Sorry, this site is best viewed on a larger screen. </p>
-</div>
 
 
 
