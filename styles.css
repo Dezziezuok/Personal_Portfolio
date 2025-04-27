@@ -8,7 +8,6 @@
     box-sizing: border-box; /* Include padding and border in element's total width and height */
   }
 
-
   /* Body attributes */
 body {
     width: 100%; /* Full width of the viewport */
@@ -20,6 +19,7 @@ body {
     position: relative; /* Relative positioning for the body */
     display: flex; /* Flexbox for alignment */
     flex-direction: column; /* Column layout */
+    }
     
 
     html {
@@ -28,7 +28,6 @@ body {
       height: 100%;
       background-color: #2f2239; /* this ensures full-page background */
       scroll-behavior: smooth; /* Smooth scrolling */
-    }
 
 
     /* Placement on tabs */
@@ -47,7 +46,7 @@ body {
     h1 {
       font-family: Georgia MT ; /* Font family for the title */
       font-weight: bold; /* Bold font weight */
-      font-size: 56px; /* Font size for the title */
+      font-size: 54px; /* Font size for the title */
       color: #b4abcf; /* Color for the title */
       text-align: center; /* Center the text */
       margin-top: 20px; /* Margin from the top */
@@ -59,6 +58,15 @@ body {
       font-weight: bold; /* Bold font weight */
       font-size: 48px; /* Font size for the header */
       color: #b4abcf; /* Color for the header */
+      text-align: center; /* Center the text */
+      margin-top: 20px; /* Margin from the top */
+    }
+
+    h3 {
+      font-family: Georgia serif; /* Font family for the subheader */
+      font-weight: bold; /* Bold font weight */
+      font-size: 30px; /* Font size for the subheader */
+      color: #b4abcf; /* Color for the subheader */
       text-align: center; /* Center the text */
       margin-top: 20px; /* Margin from the top */
     }
@@ -167,6 +175,7 @@ body {
       height: 45px; /* Height of the button */
       cursor: pointer; /* Pointer cursor on hover */
       border-radius: 5px; /* Rounded corners */
+      z-index: 9999; /* On top of everything else */
     }
 
   /* Contact button hover effect */
@@ -177,15 +186,37 @@ body {
     }
 
 
-  /* Personal portfolio picture position */
-  .portfolio-container {
-    margin-top: 75px; /* Margin from the top */
-    width: 750px;
-    height: 675px;
-    background-image: url('realportfolioimage.png'); /* Background image */
-    background-size: cover; /* Cover the entire area */
-    background-position: center; /* Center the image */
-  }
+    /* Personal portfolio picture position */
+
+    .portfolio-content {
+      display: flex; /* Inline block for the quote container */
+      width: 100%; /* Full width of the container */
+      justify-content: space-evenly; /* Center the text */
+      flex-wrap: wrap; /* Wrap items to the next line if needed */
+    }
+
+    .portfolio-ai {
+      margin-top: 75px; /* Margin from the top */
+      width: 600px;
+      height: 575px;
+      background-image: url('aiportfolioimage.png'); /* Background image */
+      background-size: cover; /* Cover the entire area */
+      background-position: center; /* Center the image */
+    }
+
+    .portfolio-quote-container {
+      margin-top: 175px; /* Margin from the top */
+      justify-content: center; /* Center the text */
+      margin-bottom: 170px; /* Margin from the bottom */
+    }
+
+
+
+    .portfolio-quote-container :hover {
+      color: white; /* Change color on hover */
+      transform: scale(1.5); /* Scale effect on hover */
+      transition: transform 0.6s ease; /* Smooth transition */
+    }
 
 
   /* Center buttons */
@@ -195,14 +226,14 @@ body {
     gap: 35px; /* Space between buttons */
     }
 
-  .nav-container {
+    .nav-container {
       font-family: Georgia serif;
       font-size: 22px;
       display: flex; /* Flexbox for alignment */
       align-items: center; /* Center items horizontally */
       justify-content: center; /* Center items vertically */
       gap: 35px; /* Space between buttons */
-      margin-top: 30px; /* Margin from the top */ 
+      
       border: none; /* No border */
     }
     
@@ -240,6 +271,7 @@ body {
       display: flex; /* Flexbox for alignment */
       justify-content: center; /* Center items horizontally */
       gap: 12.5px; /* Space between icons */
+      margin-top: -25px; /* Margin from the top */
     }
 
     .social-icon i  {
@@ -257,47 +289,18 @@ body {
       
       }
     
-    
-      /* social media icon attributes in menu*/
-      .socials-container {
-        display: flex; /* Flexbox for alignment */
-        justify-content: center; /* Center items horizontally */
-        gap: 12.5px; /* Space between icons */
-      }
-  
-      .social-icon i  {
-        font-size: 2rem;
-        border: 2px solid #b4abcf; /* White border */
-        border-radius: 10px; /* Rounded corners */
-        padding: 5px; /* Padding for the icon */
-        transition: transform 0.5s ease;
-      }
-      
-      .social-icon:hover i {
-        transform: scale(1.2);
-        background-color: white; /* White background on hover */
-        color:white; /* White color on hover */
-        
-      }
-    
-    /* Hide contents on small screen */
-    @media (max-width: 768px) {
-      .header-container,
-      .nav-container,
-      .social-media-container {
-        display: none;
-      }
-    }
+
 
 
   /* picture near the home section */
   .portfolio-image {
     justify-content: center; /* Center the image */
-    width: 550px; /* Full width of the container */
-    height: 500px; /* Full height of the container */
+    width: 600px; /* Full width of the container */
+    height: 525px; /* Full height of the container */
     object-fit: cover; /* Maintain aspect ratio */
     border-radius: 15px; /* Rounded corners for the image */
     flex-basis: 35%; /* Take up 35% of the container width */
+    margin-top: 40px; /* Margin from the top */
     
   }
 
@@ -311,6 +314,8 @@ body {
       display: flex; /* Flexbox for alignment */
       justify-content: space-around; /* Space between items */
       flex-wrap: wrap; /* Wrap items to the next line if needed */
+      gap: 70px; /* Space between items */
+    
     }
 
 
@@ -324,31 +329,28 @@ body {
       display: flex; /* Flexbox for alignment */
       justify-content: space-around; /* Space between items */
       flex-wrap: wrap; /* Wrap items to the next line if needed */
+      
     }
-
-    .moreaboutme {
-      justify-content: space-around; /* Center items horizontally */
-      gap: 35px; /* Space between items */
-      margin-top: 20px; /* Margin from the top */
-      flex-wrap: wrap; /* Wrap items to the next line if needed */
-    }
-
-    .aboutme-section {
-      justify-content: center; /* Center items horizontally */
-      align-items: center; /* Center items vertically */
-      gap: 35px; /* Space between items */
-      flex-wrap: wrap; /* Wrap items to the next line if needed */
-    }
-
-  
 
 
     /* About me tabs attributes */
     .aboutme-tabs {
       display: flex; /* Flexbox for alignment */
-      gap: 35px; /* Space between tabs */
-      margin-top: 15px; /* Margin from the top */
+      justify-content: space-around; /* Center items horizontally */
+      flex-wrap: wrap; /* Wrap items to the next line if needed */
+      gap: 100px; /* Space between tabs */
     }
+
+    .moreaboutme {
+     display: flex; /* Flexbox for alignment */
+      justify-content: space-around; /* Center items horizontally */
+      flex-wrap: wrap; /* Wrap items to the next line if needed */
+      margin-right: 35px; /* Margin from the right */
+      margin-left: 35px; /* Margin from the left */
+      gap: 125px; /* Space between tabs */
+      margin-bottom: 75px; /* Margin from the bottom */
+    }
+
 
     .aboutme-links {
       font-size : 20px; /* Font size for the tabs */
@@ -377,17 +379,17 @@ body {
 
     .aboutme-contents ul li {
       list-style: none; /* Remove bullet points */
-      margin: 10px 0; /* Margin from the top */
+      margin: 14px 0; /* Margin from the top */
       color: white; /* Text color */
       font-family: Georgia serif; /* Font family for the list items */
-      font-size: 12px; /* Font size for the list items */
+      font-size: 14px; /* Font size for the list items */
     }
 
     .aboutme-contents ul li span {
       text-decoration: none; /* Remove underline */
       color: #b4abcf; /* Color for the links */
       font-family: Georgia serif; /* Font family for the links */
-      font-size: 14px; /* Font size for the links */
+      font-size: 16px; /* Font size for the links */
       font-weight: bold; /* Bold font weight */
     }
 
@@ -399,6 +401,24 @@ body {
     }
 
 
+    /* Projects container and attributes */
+
+    #projects {
+      padding: 80px 0; /* Padding for the projects section */
+      color: white; /* Text color */
+    }
+
+    .projects-container {
+      display: flex; /* Flexbox for alignment */
+      justify-content: space-around; /* Space between items */
+      flex-wrap: wrap; /* Wrap items to the next line if needed */
+      gap: 70px; /* Space between items */
+    }
+
+
+
+
+
 
   
 
@@ -408,11 +428,91 @@ body {
 
 
 
+    #services {
+      padding: 30px 0; /* Padding for the services section */
+      color: white; /* Text color */
+    }
+
+    .services-list{
+      display:flex; /* Flexbox for alignment */
+      flex-wrap: wrap; /* Wrap items to the next line if needed */
+      gap: 35px;
+      margin: 35px;
+      justify-content: center; /* Space between items */
+    }
+
+    .services-list div{
+      width: 350px; /* Width of the services items */
+      background-color: black; /* Background color for the services items */
+      padding: 40px; /* Padding for the services items */
+      border-radius: 10px; /* Rounded corners for the services items */
+      text-align: center; /* Center the text */
+      margin-left: 15px; 
+      margin-right: 15px;
+      transition: background 0.5s, transform 0.5s; /* Transition for background and transform */
+    
+    }
+
+    .services-link {
+      color: #b4abcf; /* Color for the links */
+      font-family: Georgia serif; /* Font family for the links */
+      font-size: 16px; /* Font size for the links */
+      font-weight: bold; /* Bold font weight */
+    }
+
+    .services-list div a{
+      text-decoration: none;
+      color: #b4abcf; /* Color for the links */
+      margin-top: 20px; /* Margin from the top */
+      display: inline-block; /* Inline block for the links */
+    }
+
+    .services-list div:hover {
+      background-color: #2F4F4F; /* Darker background on hover */
+      transform: translate(0, -10px); /* Move the item on hover */
+    }
 
 
+    /* Contact me form */
+    .message-container {
+      flex-basis: 60%; /* Take up 85% of the container width */
+    }
 
+    .message-container form{
+      width: 350px; /* Full width of the container */
+      display:block; /* Block display for the form */
+      margin: 25px 0; /* Margin from the top and bottom */
+      
+    }
 
+    .message-container form input {
+      display: block; /* Block display for the input fields */
+      width: 100%; /* Full width of the container */
+      margin: 10px 0; /* Margin from the top and bottom */
+      font-family: Georgia serif; /* Font family for the textarea */
+      font-size: 14px; /* Font size for the textarea */
+      color: black; /* Text color for the textarea */
+      background-color: white; /* Background color for the textarea */
+      border: 0; /* No border */
+      padding: 5px; /* Padding for the input fields */
+      border-radius: 2px; /* Rounded corners for the input fields */
+    }
 
+   
+
+    .message-container form textarea {
+      display: block; /* Block display for the textarea */
+      width: 100%; /* Full width of the container */
+      margin: 10px 0; /* Margin from the top and bottom */
+      padding: 5px; /* Padding for the textarea */
+      border-radius: 3px; /* Rounded corners for the textarea */
+      font-family: Georgia serif; /* Font family for the textarea */
+      font-size: 14px; /* Font size for the textarea */
+      color: black; /* Text color for the textarea */
+      background-color: white; /* Background color for the textarea */
+      border: 0; /* No border */
+  
+    }
 
 
 
@@ -458,7 +558,6 @@ body {
       text-decoration: none;  /* Remove underline */
       font-weight: bold;
       font-size: 16px;
-      text-decoration: underline; /* Optional: underline on hover */
       cursor: pointer;
     }
 
@@ -467,20 +566,30 @@ body {
     }
 
 
-    /* Message box details */
+    /* interactive box details */
+
+    .interactive-container {
+      margin: 100px 0; /* Margin from the top and bottom */
+      display: flex; /* Flexbox for alignment */
+      align-items: center; /* Center items vertically */
+      gap: 5px; /* Space between items */
+      margin-bottom: 100px; /* Margin from the bottom */
+    }
     .input-container {
-      margin: 20px; /* Margin from the top */
       text-align: center;
     }
     
     .text-box {
       padding: 5px;
-      width: 250px;
-      border-radius: 8px;
+      width: 225px;
+      border-radius: 5px;
       font-family: Georgia serif;
-      font-size: 16px;
+      font-size: 14px;
       outline: none;
       transition: border-color 0.3s ease;
+      color: black; /* Text color for the textarea */
+      background-color: white; /* Background color for the textarea */
+      border: 0; /* No border */
     }
     
     /* Submission details */
@@ -494,11 +603,8 @@ body {
       padding: 5px 15px; /* Padding for the button */
       text-align: center; /* Center the text */
       text-decoration: none; /* Remove underline */
-      display: inline-block; /* Inline block for the button */
       cursor: pointer; /* Pointer cursor on hover */
-      border-radius: 5px; /* Rounded corners */
-      margin-top: 10px; /* Margin from the top */
-      
+      border-radius: 5px; /* Rounded corners */    
     }
 
     .submit-button:hover {
@@ -506,6 +612,99 @@ body {
       color: #F0FFF0; /* Lighter text on hover */
       text-decoration: none; /* Remove underline */
     }
+
+    /* Download resume */
+
+    .resume-link {
+      font-family: Georgia serif;
+      color: #b4abcf; /* Color for the links */
+      font-size: 20px; /* Font size for the links */
+      font-weight: bold; /* Bold font weight */
+      text-decoration: underline; /* Underline for the links */
+      margin-bottom: 10%; /* Margin from the bottom */
+      justify-content: center; /* Center the text */
+    }
+
+    .resume-link:hover {
+      color: white; /* Change color on hover */
+    }
+
+    .copyright {
+      width: 100%; /* Full width */
+      text-align: center; /* Center the text */
+      padding: 25px; /* Padding for the copyright section */
+      font-size: 10px; /* Font size for the copyright text */
+      font-weight: 300; /* Font weight for the copyright text */
+      margin-top : 10px; /* Margin from the top */
+      color: whitesmoke;
+
+    }
+
+
+    /* Hide menu on small screen */
+
+    @media (max-width: 768px) {
+      .nav-container,
+      .social-media-container {
+        display: none;
+      }
+    }
+
+    /* visibility on smaller screens */
+
+    #sidemenu {
+      position: fixed;
+      margin-top: 0; /* Margin from the top */
+      top: 0; /* Position from the top */
+      right: -200px; /* Hide off screen */
+      width: 150px;
+      height: 100vh;
+      background: white; /* Background color for the menu */
+      display: flex;
+      flex-direction: column;
+      transition: 0.4s;
+      z-index: 10; /* On top of everything else */
+      padding: 25px 0; /* Padding for the menu */
+      border: none; /* No border */
+      margin-top: 30px; /* Margin from the top */
+     
+    }
+
+    /* Nav icons style */
+    nav i {
+      position: relative;
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+      margin-top: 25px; /* Margin from the top */
+      z-index: 11;
+      margin-right: 5px; /* Margin from the right */
+    }
+    /* Hide the nav icons on big screens */
+    @media (min-width: 768px) {
+      #up, #down {
+        display: none;
+      }
+
+      #sidemenu {
+        display: flex; /* Flexbox for alignment */
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        flex-direction: row;
+        padding-top: 0;
+        right: 0;
+      }
+    } /* <-- this closes the @media properly */
+
+
+  
+
+
+
+
+
       
   
     
@@ -520,21 +719,3 @@ body {
 
 
 
-
-
-
-    /* Mobile device message */
-    .mobile-message {
-      display: none;
-      color: #b4abcf;
-      text-align: center;
-      padding: 50px;
-    }
-    
-    @media (max-width: 576px) {
-      .mobile-message {
-        display: block;
-      }
-    }
-    
-  
