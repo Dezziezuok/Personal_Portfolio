@@ -1,0 +1,171 @@
+*{
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-family: Georgia, sans-serif; /* Font family for the entire page */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url('https://dl.glitter-graphics.com/pub/3673/3673029fptx7oxuqv.gif');
+  background-attachment: fixed;
+  background-size: 900px;             /* Scale to cover full screen */
+  background-position: center center; /* Center the image */
+  scroll-behavior: smooth;
+}
+
+
+  /* Body attributes */
+  body {
+    width: 85%; /* Full width of the viewport */
+    overflow-y: auto; /* Vertical scroll bar */
+    overflow-x: hidden; /* No horizontal scroll bar */
+    cursor: crosshair; /* Crosshair cursor */
+    position: relative; /* Relative positioning for the body */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Column layout */
+    margin: 30px auto; /* Center the body */
+  }
+
+  .container {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      margin: 30px auto;
+      text-align: center;
+      background-color: #b4abcf;
+      border-radius: 15px;
+      padding: 10px 10px;
+      border: 14px solid #ffffff;
+      box-shadow: #2f2239 0px 1px 2px;
+    }
+
+    .page-container {
+      width: 85%;
+      max-width: 950px;
+      margin: 30px auto;
+      padding: 30px;
+      text-align: center;
+      background-color: #b4abcf;
+      border-radius: 5px;
+      flex: 1;
+    }
+
+
+    /* Page features */
+
+    h1 {
+      font-family: Georgia MT ; /* Font family for the title */
+      font-weight: bold; /* Bold font weight */
+      font-size: 54px; /* Font size for the title */
+      color: #ffffff; /* Color for the title */
+      text-align: center; /* Center the text */
+      margin-top: 20px; /* Margin from the top */
+      margin-bottom: 40px; /* Margin from the bottom */
+    }
+    
+    h2 {
+      font-family: Georgia serif; /* Font family for the header */
+      font-weight: bold; /* Bold font weight */
+      font-size: 48px; /* Font size for the header */
+      color: #ffffff; /* Color for the header */
+      text-align: center; /* Center the text */
+      margin-top: 20px; /* Margin from the top */
+    }
+
+    h3 {
+      font-family: Georgia serif; /* Font family for the subheader */
+      font-weight: bold; /* Bold font weight */
+      font-size: 30px; /* Font size for the subheader */
+      color: #ffffff; /* Color for the subheader */
+      text-align: center; /* Center the text */
+      margin-top: 20px; /* Margin from the top */
+    }
+
+    p {
+      font-family: Georgia serif; /* Font family for the subheader */
+      font-size: 16px; /* Font size for the subheader */
+      color: #ffffff; /* Color for the subheader */
+      text-align: center; /* Center the text */
+      margin-top: 20px; /* Margin from the top */
+      line-height: 2.75; /* Line height for better readability */
+    }
+    
+   span {
+      text-decoration: none; /* Remove underline */
+      color: #b4abcf; /* Color for the links */
+      font-family: Georgia serif; /* Font family for the links */
+      font-size: 16px; /* Font size for the links */
+      font-weight: bold; /* Bold font weight */
+    }
+
+
+/* Butterfly cursor */
+.butterfly  {
+      position: fixed; /* Absolute positioning for the cursor */ 
+      width: 40px; /* Width of the cursor */
+      height: 40px; /* Height of the cursor */
+      background-size: cover; /* Cover the entire area */
+      background-repeat: no-repeat; /* No repeat */
+      pointer-events: none; /* So it doesn't interfere with clicks */
+      z-index: 9999; /* On top of everything else */
+      transform: translate(25%, 25%); /* Bottom right corner */
+      transition: top 0.1s linear, left 0.1s linear; /* Smooth movement */
+      border-radius: 25px; /* Rounded corners */
+      
+    }
+
+  .butterfly-image {
+      animation: flap 0.5s ease-in-out infinite; /* Flap animation */
+      width: 100%; /* Width of the cursor */
+      height: 100%; /* Height of the cursor */
+      object-fit: contain; /* Maintain aspect ratio */
+      opacity: 0.65; /* Slightly transparent */
+    
+    }
+
+    @keyframes flap {
+      0%, 100% {
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        transform: rotate(10deg) scale(1.05);
+      }
+
+    }
+
+/* Sparkle */
+    .sparkle {
+      position: fixed;
+      width: 50px;   /* match your <img width> */
+      height: 55px;  /* match your <img height> */
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(0.6);
+      z-index: 9999;
+      animation: sparkle-pop 1.7s ease-out forwards;
+  }
+
+    @keyframes sparkle-pop {
+      0%   { transform: translate(-50%, -50%) scale(0.6); opacity: 1; }
+      50%  { transform: translate(-50%, -70%) scale(1); opacity: 0.9; }
+      100% { transform: translate(-50%, -90%) scale(1.2); opacity: 0; }
+    }
+    
+    footer {
+    width: 100%;              /* full width across the screen */
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;         /* pushes footer to bottom if content is short */
+  }
+
+    footer p {
+    margin: 0; /* keep it neat */
+     text-shadow:
+    -1px -1px 0 #b4abcf,
+    1px -1px 0 #b4abcf,
+    -1px 1px 0 #b4abcf,
+    1px 1px 0 #b4abcf;
+  }
