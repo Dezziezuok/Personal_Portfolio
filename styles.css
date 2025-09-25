@@ -907,52 +907,6 @@ p {
     }
 
 
-      /* Hide menu on small screen */
-
-    @media (max-width: 768px) {
-    .home-container,
-    .aboutme-container,
-    .services-list {
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-    }
-    
-  }
-
-    @media (max-width: 768px) {
-    h1 { font-size: 32px; }
-    h2 { font-size: 28px; }
-    h3 { font-size: 22px; }
-    p  { font-size: 14px; }
-      .name { font-size: 36px; }
-    }
-
-   #sidemenu {
-    position: fixed;
-    top: 0; /* Stick to the top */
-    right: -200px; /* Hide off screen */
-    width: 150px;
-    height: 100vh;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    transition: 0.4s;
-    z-index: 10;
-    padding: 25px; /* internal spacing, keeps content inside */
-    margin: 0; /* remove margin from top */
-    border-radius: 20px;
-    text-align: center; /* Center the text */
-
-      background-image: repeating-linear-gradient(
-      45deg,           /* angle of stripes */
-      #b4abcf 0,       /* first color start */
-      #ffffff 10px,    /* first color end (stripe width) */
-      #ffffff 7.5px,    /* second color start */
-      #ffffff 15px     /* second color end */
-    );
-  }
-
 
     /* Nav icons style */
     nav i {
@@ -967,20 +921,70 @@ p {
 
 
     /* Hide nav-container on small screens */
-    /* MOBILE: under 768px */
-@media (max-width: 768px) {
-  .nav-container {
-    display: none; /* hide normal nav on mobile */
+   /* MOBILE: under 768px */
+  @media (max-width: 768px) {
+    /* Stack sections vertically */
+    .home-container,
+    .aboutme-container,
+    .services-list {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px; /* smaller gap for phones */
+      padding: 10px;
+    }
+
+    /* Smaller text for mobile */
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    p  { font-size: 12px; }
+    .name { font-size: 24px; }
+
+    /* Hide normal nav */
+    .nav-container {
+      display: none;
+    }
+
+    /* Side menu starts hidden off-screen */
+    #sidemenu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      right: -220px;   /* stays hidden until toggled */
+      width: 150px;
+      height: 100vh;
+      background: white;
+      border-radius: 0 0 0 20px;
+      padding: 25px;
+      transition: right 0.4s ease-in-out;
+      z-index: 10;
+
+          background-image: repeating-linear-gradient(
+          45deg,           /* angle of stripes */
+          #b4abcf 0,       /* first color start */
+          #ffffff 10px,    /* first color end (stripe width) */
+          #ffffff 7.5px,    /* second color start */
+          #ffffff 15px     /* second color end */
+        );
+    }
+
+    /* Show nav icons */
+    nav i {
+      position: relative; 
+      font-size: 20px; color: white; 
+      cursor: pointer; margin-top: 25px; /* Margin from the top */ 
+      z-index: 11;
+      display: block;
+    }
+
+    /* When sidemenu is active, slide it in */
+    #sidemenu.active {
+      right: 0;
+    }
   }
 
-  #sidemenu {
-    display: flex; /* mobile menu starts hidden off-screen */
-  }
-
-  nav i {
-    display: block; /* show open/close icons */
-  }
-}
 
 /* DESKTOP: 768px and above */
 @media (min-width: 768px) {
@@ -1007,7 +1011,7 @@ p {
     height: auto;
     background: none;
     flex-direction: row;
-    padding: 0;
+    padding: 25px;
     margin: 0;
     right: 0;
     display: flex !important;
