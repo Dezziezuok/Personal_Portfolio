@@ -263,22 +263,22 @@ p {
       align-items: center;
       justify-content: center;
       
-      margin: 0 auto;              /* THIS centers the div horizontally */
+      margin: 0px auto;              /* THIS centers the div horizontally */
+      margin-top: 75px;            /* Margin from the top */
       
-      font-size: 16px;
-      font-family: Arial, sans-serif;
-      color: #000;
-      text-decoration: none;
-      text-align: center;
     }
 
 
 
 
     #up, #down, #open-icon, #close-icon {
-      margin:5px; /* Margin on the left and right */
       position: fixed; /* Fixed positioning for the icons */
       align-content: center; /* Center the content inside the container */
+      text-shadow:
+        -1px -1px 0 #b4abcf,
+        1px -1px 0 #b4abcf,
+        -1px 1px 0 #b4abcf,
+        1px 1px 0 #b4abcf;  
     }
 
     /* Home page Desirae part */
@@ -325,17 +325,16 @@ p {
       background-color: #8FBC8F;
       color: #2F4F4F;
       font-family: Georgia serif;
-      font-size: 22px;
+      font-size: 18px;
       font-weight: bold;
       border: none; /* No border */
-      padding: 5px; /* Padding for the button */   
       text-align: center; /* Center the text */
       text-decoration: none; /* Remove underline */
       display: flex; /* Align items in the center */
       justify-content: center; /* Center horizontally */
       align-items: center; /* Center vertically */
-      width: 175px; /* Width of the button */
-      height: 45px; /* Height of the button */
+      width: 150px; /* Width of the button */
+      height: 35px; /* Height of the button */
       cursor: pointer; /* Pointer cursor on hover */
       border-radius: 5px; /* Rounded corners */
       z-index: 9999; /* On top of everything else */
@@ -354,10 +353,9 @@ p {
 
     .portfolio-content {
       display: flex;
-      justify-content: center; /* instead of space-evenly */
+      justify-content: space-evenly; /* instead of space-evenly */
       align-items: center;     /* vertical centering if needed */
       flex-wrap: wrap;
-      gap: 125px;              /* spacing between elements */
     }
 
 
@@ -367,13 +365,13 @@ p {
     }
 
     .portfolio-ai {
-      margin-top: 100px; /* Margin from the top */
+      margin-top: 0px; /* Margin from the top */
       display: flex;             /* make it a flex container */
       justify-content: center;   /* center horizontally */
       align-items: center;       /* center vertically */
       margin: 100px auto 0 auto; /* auto left/right = centers the box */
-      width: 500px;
-      height: 500px;
+      width: 400px;
+      height: 400px;
       background-size: cover;
       background-position: center;
       border-radius: 20px;
@@ -381,11 +379,11 @@ p {
 
 
     .portfolio-quote-container {
-      margin-top: 175px; /* Margin from the top */
+      margin-top: 100px; /* Margin from the top */
       justify-content: center; /* Center the text */
       text-align: center; /* Center the text */
       justify-content: center; /* Center the text */
-      margin-bottom: 170px; /* Margin from the bottom */
+      margin-bottom: 50px; /* Margin from the bottom */
     }
 
     .portfolio-quote-container :hover {
