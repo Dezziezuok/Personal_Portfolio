@@ -272,13 +272,14 @@ p {
     }
 
 
-    #up, #down, #open-icon, #close-icon {
+     #up, #down, #open-icon, #close-icon {
       position: fixed; /* Fixed positioning for the icons */
       align-content: center; /* Center the content inside the container */
       margin-top: 0px; /* Margin from the top */
-    
+      left: 50%;           /* Move to middle horizontally */
+      transform: translate(-50%, -50%); /* Shift back by half its size */
     }
-
+    
     /* Home page Desirae part */
     #home {
       text-align: center; /* Center the content inside the container */
@@ -304,8 +305,8 @@ p {
       position: absolute; /* Absolute positioning for the logo */
       top: 20px; /* Margin from the top */
       left: 20px; /* Distance from the right */
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      height: auto;
       object-fit: cover; /* Maintain ratio */
       border-radius: 10px; /* Rounded corners for the logo */
     }
@@ -744,7 +745,7 @@ p {
     }
     
     .footer-logo {
-      width: 100px;
+      width: 90px;
       height: auto;
       border-radius: 10px;
     }
@@ -812,6 +813,12 @@ p {
       align-items: center;
       justify-content: center;
       border-radius: 45%;
+      color: #b4abcf;
+
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.8) inset, /* soft inner white */
+        0 0 3px rgba(255, 255, 255, 0.6) inset,   /* glowing inside */
+        0 0 4px rgba(255, 255, 255, 0.5);         /* outer faint glow */
     }
 
     #clickPad:hover {
@@ -891,16 +898,33 @@ p {
       transform: scale(1.1); /* Makes the link 10% bigger */
       transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
     }
+  .copyright {
+    width: 100%;
+    overflow: hidden;       /* hides the overflow */
+    white-space: nowrap;    /* keeps text on one line */
+    box-sizing: border-box;
+    color: white;
+    font-size: 10px;
+    font-weight: 300;
+    margin-top: 5%;
+    text-align: left;       /* align to left since it’ll animate */
+  }
 
-    .copyright {
-      width: 100%; /* Full width */
-      text-align: center; /* Center the text */
-      font-size: 10px; /* Font size for the copyright text */
-      font-weight: 300; /* Font weight for the copyright text */
-      margin-top : 5%; /* Margin from the top */
-      color: white;
+  .copyright span {
+    display: inline-block;
+    padding-left: 100%;     /* start from outside the screen */
+    animation: scroll-left 15s linear infinite;
+  }
 
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
     }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
 
 
 
