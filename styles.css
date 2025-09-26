@@ -42,6 +42,7 @@ main {
 
 /* ===== Light Mode ===== */
 body.light-mode,
+body.light-mode body,
 body.light-mode .page-container,
 body.light-mode html {
   background-color: #ffffff !important;
@@ -252,33 +253,29 @@ p {
     }
 
    .glitter-banner {
-      width: 450px;                 /* fixed width of your banner */
-      height: 75px;
+      width: 90%;                        /* take full width on small screens */
+      max-width: 450px;                   /* never go beyond 450px */
+      height: 55px;
       background-image: url('http://dl7.glitter-graphics.net/pub/258/258867or530jtlfu.gif');
       background-repeat: no-repeat;
       background-position: center center;
+      background-size: contain;           /* scale nicely */
       background-color: transparent;
-      
+
       display: flex;
       align-items: center;
       justify-content: center;
-      
-      margin: 0px auto;              /* THIS centers the div horizontally */
-      margin-top: 75px;            /* Margin from the top */
+
+      margin: 50px auto 0 auto;          
       
     }
-
-
 
 
     #up, #down, #open-icon, #close-icon {
       position: fixed; /* Fixed positioning for the icons */
       align-content: center; /* Center the content inside the container */
-      text-shadow:
-        -1px -1px 0 #b4abcf,
-        1px -1px 0 #b4abcf,
-        -1px 1px 0 #b4abcf,
-        1px 1px 0 #b4abcf;  
+      margin-top: 0px; /* Margin from the top */
+    
     }
 
     /* Home page Desirae part */
@@ -370,8 +367,8 @@ p {
       justify-content: center;   /* center horizontally */
       align-items: center;       /* center vertically */
       margin: 100px auto 0 auto; /* auto left/right = centers the box */
-      width: 400px;
-      height: 400px;
+      width: 500px;
+      height: auto;
       background-size: cover;
       background-position: center;
       border-radius: 20px;
@@ -492,33 +489,32 @@ p {
       flex-wrap: wrap; /* Wrap items to the next line if needed */
     }
 
-    /* About me tabs attributes */
+    .moreaboutme {
+      display: flex; /* Makes children elements side-by-side */
+      justify-content: space-around; /* Pushes the two main sections to the edges */
+      align-items: flex-start; /* Aligns them at the top */
+      flex-wrap: wrap; /* Allows sections to stack on smaller screens */
+      gap: 50px; /* Provides space between the text and the tabs */
+      margin-bottom: 50px;
+    }
+
+        /* About me tabs attributes */
     .aboutme-tabs {
       display: flex; /* Flexbox for alignment */
       justify-content: space-between; /* Center items horizontally */
       flex-wrap: wrap; /* Wrap items to the next line if needed */
     }
 
-    .moreaboutme {
-      display: flex; /* Makes children elements side-by-side */
-      justify-content: space-around; /* Pushes the two main sections to the edges */
-      align-items: flex-start; /* Aligns them at the top */
-      flex-wrap: wrap; /* Allows sections to stack on smaller screens */
-      gap: 100px; /* Provides space between the text and the tabs */
-      margin-bottom: 50px;
-    }
-
     .about-me-text {
       max-width: 750px; /* Maximum width for better readability */
+      flex: 1; /* Takes up available space */
     }
 
     .aboutme-tabs {
       display: flex;
       justify-content: space-between; /* Aligns the tabs to the left */
       flex-wrap: wrap; /* Wrap items to the next line if needed */
-      gap: 100px; /* Space between the tabs */
       width: 100%;
-      padding-right: 50px; /* slight indent */
     }
 
     /* Tab content */
@@ -922,25 +918,36 @@ p {
    /* MOBILE: under 768px */
   @media (max-width: 768px) {
     /* Stack sections vertically */
-    .home-container,
-    .aboutme-container,
-    .services-list {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px; /* smaller gap for phones */
-      padding: 10px;
+    main {
+    display: flex;              /* make sure flex is applied */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    /* centers vertically if height is set */
+    gap: 15px;                  /* smaller gap for phones */
+    padding: 10px;
+    max-width: 350px;           /* limit max width */
+    margin: 0 auto;             /* centers container horizontally */
+    text-align: center;         /* centers text inside */
     }
 
+
     /* Smaller text for mobile */
-    h1 { font-size: 24px; }
-    h2 { font-size: 20px; }
-    h3 { font-size: 18px; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    h4 { font-size: 16px; }
+    span { font-size: 14px; }
     p  { font-size: 12px; }
-    .name { font-size: 24px; }
+    .name { font-size: 28px; }
 
     /* Hide normal nav */
     .nav-container {
       display: none;
+    }
+
+    .home-image,
+    .portfolio-ai {
+      max-width: 300px;
     }
 
     /* Side menu starts hidden off-screen */
@@ -980,6 +987,41 @@ p {
     /* When sidemenu is active, slide it in */
     #sidemenu.active {
       right: 0;
+    }
+
+    .aboutme-container {
+      flex-direction: column;   /* stack vertically */
+      align-items: center;      /* center contents */
+      max-width: 100%;          /* fit small screen */
+      padding: 0 10px;          /* add breathing room */
+    }
+
+    .moreaboutme {
+      flex-direction: column;   /* stack side by side items vertically */
+      align-items: center;      /* center them */
+      gap: 20px;                /* smaller gap */
+      margin-bottom: 30px;
+    }
+
+    .about-me-text {
+      max-width: 100%;          /* allow full width */
+      text-align: center;       /* keep centered */
+    }
+
+    .aboutme-tabs {
+      justify-content: center;  /* center the tabs */
+      gap: 15px;                /* smaller spacing */
+      padding: 0;
+    }
+
+    .aboutme-contents ul li {
+      width: 100%;              /* no fixed width */
+      font-size: 12px;          /* smaller text */
+      text-align: center;       /* center list text */
+    }
+
+    .aboutme-links {
+      font-size: 18px;          /* shrink tab font size */
     }
   }
 
