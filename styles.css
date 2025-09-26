@@ -145,6 +145,7 @@ body.light-mode .services-text {
 }
 
 
+
 /* Page features */
 h1 {
   font-family: Georgia MT;
@@ -301,6 +302,7 @@ p {
   /*Logo appearance  */
   .logo-image {
       position: absolute; /* Absolute positioning for the logo */
+      top: 20px; /* Margin from the top */
       left: 20px; /* Distance from the right */
       width: 100px;
       height: 100px;
@@ -353,6 +355,7 @@ p {
       justify-content: space-evenly; /* instead of space-evenly */
       align-items: center;     /* vertical centering if needed */
       flex-wrap: wrap;
+      gap: 25px; /* Space between items */
     }
 
 
@@ -401,14 +404,15 @@ p {
       display: flex; /* Flexbox for alignment */
       align-items: center; /* Center items horizontally */
       justify-content: center; /* Center items vertically */
-      gap: 35px; /* Space between buttons */
+      gap: 50px; /* Space between buttons */
       border: none; /* No border */
+      padding: 15px !important;
     }
     
     .nav-link {
       text-decoration: none;
       color: #b4abcf;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: bold;
       position: relative;
       text-shadow:
@@ -459,9 +463,7 @@ p {
     
     .social-icon:hover i {
       transform: scale(1.2);
-      background-color: white; /* White background on hover */
-      color:white; /* White color on hover */
-      
+      background-color: white; /* White background on hover */      
       }
   
 
@@ -803,8 +805,8 @@ p {
       background-size: cover;           /* Make image cover the whole div */
       background-position: center;      /* Center the image */
       background-repeat: no-repeat;     /* Prevent tiling */
-      width: 250px;
-      height: 250px;
+      width: 175px;
+      height: 175px;
       margin: 0 auto;                   /* Center the pad on the page */
       display: flex;                    /* Allow centering content inside */
       align-items: center;
@@ -924,8 +926,7 @@ p {
     align-items: center;
     justify-content: center;    /* centers vertically if height is set */
     gap: 15px;                  /* smaller gap for phones */
-    padding: 10px;
-    max-width: 350px;           /* limit max width */
+    padding: 15px;
     margin: 0 auto;             /* centers container horizontally */
     text-align: center;         /* centers text inside */
     }

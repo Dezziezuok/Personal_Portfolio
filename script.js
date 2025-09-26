@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(timer);
         clickPad.disabled = true;
         startBtn.disabled = false;
-        alert("Game Over! 🎉 Your score: " + score);
+        alert("Game Over!💔 You got a hefty score of: " + score);
       }
     }, 1000);
   });
