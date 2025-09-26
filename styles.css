@@ -279,7 +279,7 @@ p {
       left: 50%;           /* Move to middle horizontally */
       transform: translate(-50%, -50%); /* Shift back by half its size */
     }
-    
+
     /* Home page Desirae part */
     #home {
       text-align: center; /* Center the content inside the container */
@@ -778,12 +778,12 @@ p {
     /* Click the button game */
 
     #startBtn {
-      background-color: #8FBC8F; /* Button color */
-      color: #2F4F4F; /* Text color */
+      background-color: #ffffff; /* Button color */
+      color: #2f2239; /* Text color */
       font-family: Georgia serif;
       font-size: 18px;
       font-weight: bold;
-      border: none; /* No border */
+      border: 2px solid #b4abcf; /* Border for the button */
       padding: 5px 15px; /* Padding for the button */
       text-align: center; /* Center the text */
       text-decoration: none; /* Remove underline */
@@ -792,8 +792,7 @@ p {
     }
 
     #startBtn:hover {
-      background: #2F4F4F; /* Darker background on hover */
-      color: #ffffff; /* Lighter text on hover */
+      color: #b4abcf; /* Lighter text on hover */
     }
 
     #startBtn:disabled {
