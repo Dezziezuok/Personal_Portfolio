@@ -844,7 +844,7 @@ body.light-mode .services-text {
     
     .text-box {
       padding: 5px;
-      width: 225px;
+      max-width: 225px;
       border-radius: 5px;
       font-family: Georgia serif;
       font-size: 14px;
@@ -881,7 +881,7 @@ body.light-mode .services-text {
     .resume-link {
       font-family: Georgia serif;
       color: #b4abcf; /* Color for the links */
-      font-size: 20px; /* Font size for the links */
+      font-size: 18px; /* Font size for the links */
       font-weight: bold; /* Bold font weight */
       text-decoration: underline; /* Underline for the links */
       margin-top: 7.5%; /* Margin from the top */
