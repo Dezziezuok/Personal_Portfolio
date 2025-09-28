@@ -10,7 +10,7 @@
 body {
   margin: 0; /* space below header */
   width: 100%;
-  height: 100%;
+  min-height: 100vh;   /* instead of height: 100% */
   background-color: #2f2239 !important;
   overflow-y: auto;
   overflow-x: hidden;
@@ -30,12 +30,23 @@ html {
 }
 
 .page-container {
-  margin-top: 20px; /* space below header */
+   margin-top: 20px;
   background-color: #2f2239;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1 1 auto;        /* let it shrink/grow */
+  align-items: center;   /* center horizontally */
+  justify-content: center; /* center vertically if you want */
+  width: 100%;           /* keep within screen */
+  padding: 10px;
+  overflow-x: hidden;    /* prevent sideways cutoff */
 }
+
+.page-container > * {
+  max-width: 100%;       /* force children to fit screen */
+  box-sizing: border-box;
+}
+
 /* Page features */
 h1 {
   font-family: Georgia MT;
@@ -950,6 +961,18 @@ body.light-mode .services-text {
     text-align: center;         /* centers text inside */
     }
 
+    .page-container {
+    padding: 15px;
+    padding: 15px;
+    align-items: center;  /* keep things centered */
+    text-align: center;   /* center text */
+  }
+
+  /* Example: stack children vertically */
+  .page-container > * {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
 
     /* Smaller text for mobile */
     h1 { font-size: 28px; }
