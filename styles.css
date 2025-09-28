@@ -30,7 +30,7 @@ html {
 }
 
 .page-container {
-   margin-top: 20px;
+  margin-top: 20px;
   background-color: #2f2239;
   display: flex;
   flex-direction: column;
@@ -378,7 +378,8 @@ body.light-mode .services-text {
       justify-content: center;   /* center horizontally */
       align-items: center;       /* center vertically */
       margin: 100px auto 0 auto; /* auto left/right = centers the box */
-      width: 500px;
+      width: 100%;
+      max-width: 500px;
       height: auto;
       background-size: cover;
       background-position: center;
@@ -487,7 +488,8 @@ body.light-mode .services-text {
 
     .home-image {
       margin-top: 40px; /* Margin from the top */
-      width: 600px;
+      width: 100%;
+      max-width: 600px;
       height: auto;
     }
 
@@ -566,7 +568,9 @@ body.light-mode .services-text {
       font-family: Georgia serif; /* Font family for the list items */
       font-size: 16px; /* Font size for the list items */
       line-height: 1.7; /* Line height for better readability */
-      width: 550px; /* Width of the list items */
+      width: 100%;
+      max-width: 550px;
+
     }
 
     .aboutme-contents ul li span {
@@ -652,13 +656,13 @@ body.light-mode .services-text {
     }
 
     .services-list div{
-      width: 350px; /* Width of the services items */
+      width: 100%;
+      max-width: 350px;
+      margin: 15px auto;
       background-color: black; /* Background color for the services items */
       padding: 40px; /* Padding for the services items */
       border-radius: 10px; /* Rounded corners for the services items */
       text-align: center; /* Center the text */
-      margin-left: 15px; 
-      margin-right: 15px;
       transition: background 0.5s, transform 0.5s; /* Transition for background and transform */
     
     }
@@ -930,9 +934,6 @@ body.light-mode .services-text {
       transform: translateX(-100%);
     }
   }
-
-
-
 
     /* Nav icons style */
     nav i {
