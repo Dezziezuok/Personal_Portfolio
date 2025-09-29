@@ -38,7 +38,7 @@ html {
   align-items: center;   /* center horizontally */
   justify-content: center; /* center vertically if you want */
   width: 100%;           /* keep within screen */
-  padding: 10px;
+  padding: 0 10px;          /* breathing room */
   overflow-x: hidden;    /* prevent sideways cutoff */
 }
 
@@ -634,7 +634,7 @@ body.light-mode .services-text {
 
 
     #services {
-      padding: 30px 0; /* Padding for the services section */
+      padding: 20px 0; /* Padding for the services section */
       color: white; /* Text color */
     }
 
@@ -660,7 +660,7 @@ body.light-mode .services-text {
       max-width: 350px;
       margin: 15px auto;
       background-color: black; /* Background color for the services items */
-      padding: 40px; /* Padding for the services items */
+      padding: 40px 5px;
       border-radius: 10px; /* Rounded corners for the services items */
       text-align: center; /* Center the text */
       transition: background 0.5s, transform 0.5s; /* Transition for background and transform */
@@ -962,9 +962,8 @@ body.light-mode .services-text {
     text-align: center;         /* centers text inside */
     }
 
-    .page-container {
-    padding: 15px;
-    padding: 15px;
+  .page-container {
+    padding: 5px;
     align-items: center;  /* keep things centered */
     text-align: center;   /* center text */
   }
@@ -1038,7 +1037,6 @@ body.light-mode .services-text {
       flex-direction: column;   /* stack vertically */
       align-items: center;      /* center contents */
       max-width: 100%;          /* fit small screen */
-      padding: 0 10px;          /* add breathing room */
     }
 
     .moreaboutme {
