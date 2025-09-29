@@ -367,7 +367,7 @@ body.light-mode .services-text {
     }
 
 
-    img, .portfolio-ai, .portfolio-image {
+    img {
       max-width: 90%;
       height: auto;
     }
@@ -379,11 +379,13 @@ body.light-mode .services-text {
       align-items: center;       /* center vertically */
       margin: 100px auto 0 auto; /* auto left/right = centers the box */
       width: 100%;
-      max-width: 500px;
+      width: 500px;
       height: auto;
       background-size: cover;
       background-position: center;
       border-radius: 20px;
+      border: #b4abcf 2px solid;
+
     }
 
 
@@ -491,6 +493,7 @@ body.light-mode .services-text {
       width: 100%;
       max-width: 600px;
       height: auto;
+
     }
 
   
@@ -660,10 +663,11 @@ body.light-mode .services-text {
       max-width: 350px;
       margin: 15px auto;
       background-color: black; /* Background color for the services items */
-      padding: 40px 5px;
+      padding: 40px 10px;
       border-radius: 10px; /* Rounded corners for the services items */
       text-align: center; /* Center the text */
       transition: background 0.5s, transform 0.5s; /* Transition for background and transform */
+      border: #2f2239 2px solid;
     
     }
 
@@ -672,6 +676,7 @@ body.light-mode .services-text {
       font-family: Georgia serif; /* Font family for the links */
       font-size: 16px; /* Font size for the links */
       font-weight: bold; /* Bold font weight */
+    
     }
 
     .services-link:hover {
@@ -989,8 +994,7 @@ body.light-mode .services-text {
       display: none;
     }
 
-    .home-image,
-    .portfolio-ai {
+    .home-image {
       max-width: 300px;
     }
 
