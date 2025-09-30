@@ -7,15 +7,25 @@
   }
 
 html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-image: url('https://dl.glitter-graphics.com/pub/3673/3673029fptx7oxuqv.gif');
-  background-attachment: fixed;
-  background-size: 900px;             /* Scale to cover full screen */
-  background-position: center center; /* Center the image */
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+    /* Background image */
+    background-image: url('https://dl.glitter-graphics.com/pub/3371/3371571ouw1rxfdmg.gif');
+    
+    /* Repeat options */
+    background-repeat: repeat;          /* Repeats both horizontally and vertically */
+    background-size: 150px 150px;       /* Controls the size of each tile */
+    background-attachment: fixed;       /* Stays in place when scrolling */
+    background-position: center center; /* Center the tiles around the viewport */
+    
+    /* Optional stylish tweaks */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    
+    /* Overlay to soften glare if GIF is too bright */
+    position: relative;
 
 }
 
@@ -162,7 +172,50 @@ html {
       50%  { transform: translate(-50%, -70%) scale(1); opacity: 0.9; }
       100% { transform: translate(-50%, -90%) scale(1.2); opacity: 0; }
     }
+   
     
+.video-container {
+  text-align: center;          /* center video + link */
+  margin: 40px auto;           /* spacing from other content */
+  max-width: 600px;            /* keep video from being too wide */
+}
+
+.video-container video {
+  width: 100%;                 /* responsive scaling */
+  height: auto;                /* keep aspect ratio */
+  border-radius: 5px;         /* rounded corners */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2); /* subtle shadow */
+  border: 2px solid #ffffff; /* white border */
+}
+
+.btn-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+ 
+}
+
+.btn-link:hover {
+  background: #b4abcf;         /* darker purple on hover */
+}
+
+.placeholder-image {
+    display: block;           /* makes it behave like a block so margin auto works */
+    margin: 20px auto;        /* centers horizontally with some vertical spacing */
+    max-width: 80%;           /* responsive, never bigger than 80% of container */
+    height: auto;             /* keeps aspect ratio */
+    border-radius: 12px;      /* rounded corners */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover */
+}
+
+.placeholder-image:hover {
+    transform: scale(1.05);   /* slight zoom on hover */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
     footer {
     width: 100%;              /* full width across the screen */
     text-align: center;
@@ -178,3 +231,5 @@ html {
     -1px 1px 0 #b4abcf,
     1px 1px 0 #b4abcf;
   }
+
+

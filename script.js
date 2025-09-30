@@ -232,5 +232,9 @@ document.addEventListener('DOMContentLoaded', () => {
     scoreDisplay.innerHTML = "<h5>Score:</h5> " + score;
   });
 
+  document.getElementById("score").style.cssText = "font-family: Georgia, serif; font-size: 14px; font-weight: bold; color: #b4abcf;";
+  document.getElementById("timer").style.cssText = "font-family: Georgia, serif; font-size: 14px; font-weight: bold; color: #b4abcf;";
+
+
 
 });

@@ -36,6 +36,7 @@
           Image processing & style transfer with OpenCV to apply cartoon and oil painting effects.<br>
 
           Automated saving system for storing completed drawings in PNG format.<br>
+          <i>**Demo Coming Soon</i>
         </p>
       </section>
 
@@ -52,15 +53,47 @@
           Applied image processing techniques (masking, overlay blending, thresholding) to merge drawings with webcam feed.<br>
 
           Automated storage of player creations by saving canvas output as PNG images.<br>
+
+          <i>**Demo Coming Soon</i>
         </p>
+       
       </section>
 
       <section>
         <h3>Project 3: Recommendation System (MovieLens, Python) </h3>
         <p>
-          Built a movie recommendation engine using collaborative filtering and matrix factorization (SVD), achieving 20% lower RMSE than baseline popularity ranking on MovieLens dataset.<br>
+          Developed an interactive book recommendation system leveraging machine learning and natural language processing to provide personalized suggestions.<br>
 
-          Implemented content-based filtering with TF-IDF on movie genres to personalize results.
+          Semantic embeddings: Encoded 5,600+ book descriptions into vector embeddings using pre-trained LLMs, enabling content-aware similarity search.<br>
+
+          Hybrid recommendation: Combined semantic similarity with metadata (genre, author, fiction/non-fiction) for more relevant results.<br>
+
+          Emotion & sentiment analysis: Extracted tones such as suspenseful, joyful, or sad, giving users a new way to filter and explore books.<br>
+
+          Replaced Books without a thumbnail with a placeholder image for better UI consistency.<br>
+          
+          Scalable architecture: Efficiently handled thousands of books with real-time inference via vector databases (Chroma).<br>
+
+          Interactive UI: Built with Gradio, allowing users to enter descriptions or preferences and instantly receive tailored book recommendations.<br>
+
+          Stack: Python 3.11, Pandas, Matplotlib, Transformers, LangChain, Chroma, Gradio, Jupyter.<br>
+
+          Integrated with OpenAI API via .env for semantic search and classification.<br>
+
+          Data sourced from Kaggle, processed with custom cleaning pipelines.<br>
+
+        <div class="video-container">
+          <video controls>
+            <source src="pages_content/book_recommender_vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <p>
+            <a href="https://d0dbb22e1182a5ef96.gradio.live" target="_blank" class="btn-link">
+              Try the Gradio Demo (expires Oct 5, 2025)
+            </a>
+          </p>
+        </div>
 
         </p>
       </section>
