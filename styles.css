@@ -630,9 +630,48 @@ body.light-mode .services-text {
     /* Projects container and attributes */
     .projects-container {
       display: flex;
-      flex-direction: column; /* stack vertically */
-      align-items: center;    /* center text under heading */
-      text-align: center;     /* center paragraphs */
+      flex-direction: column;  /* Stack heading and images vertically */
+      align-items: center;     /* Center content horizontally */
+      justify-content: center; /* Center vertically if parent allows */
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;          /* Centers the container itself */
+    }
+
+    .placeholder-image {
+        display: block;           /* makes it behave like a block so margin auto works */
+        margin: 20px auto;        /* centers horizontally with some vertical spacing */
+        max-width: 300px;           /* responsive, never bigger than 80% of container */
+        height: auto;             /* keeps aspect ratio */
+        border-radius: 12px;      /* rounded corners */
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* subtle shadow */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover */
+        border: 2px solid #b4abcf;
+    }
+
+    .placeholder-image:hover {
+        transform: scale(1.02);   /* slight zoom on hover */
+    }
+
+    .projects-images {
+        display: flex;                /* Make children align in a row */
+        justify-content: center;      /* Center the row horizontally */
+        gap: 40px;                    /* Space between items */
+        flex-wrap: wrap;              /* Allows wrapping on small screens */
+        margin: 20px 0;
+    }
+
+    .projects-images .painting,
+    .projects-images .finance-tracker {
+        text-align: center;           /* Center image and caption inside each div */
+        max-width: 300px;             /* Optional: limit each image block */
+    }
+
+    .finance-tracker-link {
+      text-decoration: none; /* Remove underline */
+      color: #b4abcf; /* Color for the links */
+      font-family: Georgia serif; /* Font family for the links */
+      font-size: 16px; /* Font size for the links */
     }
 
 
@@ -663,7 +702,7 @@ body.light-mode .services-text {
       max-width: 350px;
       margin: 15px auto;
       background-color: black; /* Background color for the services items */
-      padding: 40px 10px;
+      padding: 35px 10px;
       border-radius: 10px; /* Rounded corners for the services items */
       text-align: center; /* Center the text */
       transition: background 0.5s, transform 0.5s; /* Transition for background and transform */
@@ -705,8 +744,10 @@ body.light-mode .services-text {
 
     .message-container form{
       width: 350px; /* Full width of the container */
+      height: auto; /* Auto height */
       display:block; /* Block display for the form */
       margin: 25px 0; /* Margin from the top and bottom */
+      justify-self: center; /* Center the form */
     }
 
     .message-container form input {
@@ -723,8 +764,6 @@ body.light-mode .services-text {
       border: 1px solid #2f2239; /* Rounded corners for the form */
 
     }
-
-   
 
     .message-container form textarea {
       display: block; /* Block display for the textarea */
@@ -795,11 +834,11 @@ body.light-mode .services-text {
 
     #startBtn {
       background-color: #ffffff; /* Button color */
-      color: #2f2239; /* Text color */
+      color: #b4abcf; /* Text color */
       font-family: Georgia serif;
       font-size: 16px;
       font-weight: bold;
-      border: 2px solid #b4abcf; /* Border for the button */
+      border: 3px solid #b4abcf; /* Border for the button */
       padding: 5px 15px; /* Padding for the button */
       text-align: center; /* Center the text */
       text-decoration: none; /* Remove underline */
@@ -812,41 +851,48 @@ body.light-mode .services-text {
     }
 
     #startBtn:disabled {
-      background: #2F4F4F; /* Darker background on hover */
+      background: #b4abcf; /* Darker background on hover */
       color: #ffffff; /* Lighter text on hover */
     }
 
     #clickPad {
-      background-image: url('https://dl.glitter-graphics.com/pub/883/883627yhco5l8c3i.jpg');
-      background-size: cover;           /* Make image cover the whole div */
-      background-position: center;      /* Center the image */
-      background-repeat: no-repeat;     /* Prevent tiling */
+      background-image: url('https://dl.glitter-graphics.com/pub/3371/3371571ouw1rxfdmg.gif');
+      background-size: 125%;          /* Zoom in more on the glitter */
+      background-repeat: no-repeat;
+      background-position: top center; /* Keep the focus on the top */
+      
       width: 175px;
       height: 175px;
-      margin: 0 auto;                   /* Center the pad on the page */
-      display: flex;                    /* Allow centering content inside */
+      margin: 0 auto;               /* Center horizontally */      
+      display: flex;                   
       align-items: center;
       justify-content: center;
+      
       border-radius: 45%;
-      color: #b4abcf;
-
-      box-shadow:
-        0 0 0 1px rgba(255, 255, 255, 0.8) inset, /* soft inner white */
-        0 0 3px rgba(255, 255, 255, 0.6) inset,   /* glowing inside */
-        0 0 4px rgba(255, 255, 255, 0.5);         /* outer faint glow */
+      color: #ffffff;
+      border: 2px solid #b4abcf;
     }
 
     #clickPad:hover {
       cursor: pointer;                  /* Pointer cursor on hover */
-      transform: scale(1.05);           /* Slightly enlarge on hover */
+      transform: scale(1.01);           /* Slightly enlarge on hover */
       transition: transform 0.2s ease;  /* Smooth transition */
+      border: 2px solid #b4abcf;
     }
 
     #clickPad:active {
       transform: scale(0.97);           /* Slightly shrink on click */
       transition: transform 0.1s ease;  /* Smooth transition */
-      border: 1px solid #2f2239;
+      border: 2px solid #b4abcf;
       box-shadow: none;
+    }
+
+    #score,
+    #timer {
+      font-family: Georgia, serif !important;
+      font-size: 18px !important;
+      font-weight: bold !important;
+      color: #b4abcf !important;
     }
 
 
