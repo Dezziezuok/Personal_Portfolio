@@ -14,7 +14,7 @@
 
     <header>
       <h2>AI/ML Engineering Projects
-       <a href="https://www.glitter-graphics.com">
+       <a>
         <img src="http://dl3.glitter-graphics.net/pub/1306/1306923edocnfl54w.gif" width=40 height=50 border=0>
       </a>
       </h2>
@@ -22,79 +22,83 @@
 
     <main>
       <section>
-        <h3>Project 1: AI Virtual Painter (OpenCV, Python)</h3>
+        <h3>Project 1: AI Virtual Painter (OpenCV, Mediapipe, Python)</h3>
         <p>
-          Developed a gesture-based virtual painting application with real-time hand tracking. Users draw directly in the air, selecting from 7+ colors and an eraser tool via finger gestures.<br>
-          Implemented multiple brush modes, canvas management, and creative filters. Key features:<br>
+          Developed a <b>gesture-based</b> virtual painting application with <b>real-time hand tracking</b>. Users <b>draw</b> directly in the <b>air</b>, selecting from <b>7 colors</b> and an <b>eraser tool</b> via <b>finger gestures</b>.<br>
 
-          Hand gesture recognition to switch between brushes, clear canvas, and save artwork without keyboard/mouse.<br>
-
-          Drawing tools: normal brush, pixel brush, eraser, and customizable thickness.<br>
-
-          UI integration with dynamic header bar for color selection and visual feedback.<br>
-
-          Image processing & style transfer with OpenCV to apply cartoon and oil painting effects.<br>
-
-          Automated saving system for storing completed drawings in PNG format.<br>
-          <i>**Demo Coming Soon</i>
-        </p>
-      </section>
-
-      <section>
-        <h3>Project 2: Drawing Game (OpenCV, Python)</h3>
-        <p>
-          Built an interactive gesture-based drawing game using Python and OpenCV. Players receive randomized word prompts (e.g., “cat,” “robot,” “pizza”) and draw them in real time with hand tracking.<br>
-          Implemented a 40-second timer, drawing via fingertip detection, and automatic saving of completed sketches. Key features:<br>
-
-          Integrated hand tracking module for gesture detection and fingertip drawing input.<br>
-
-          Designed a game loop with randomized prompts, countdown timer, and on-screen feedback.<br>
-
-          Applied image processing techniques (masking, overlay blending, thresholding) to merge drawings with webcam feed.<br>
-
-          Automated storage of player creations by saving canvas output as PNG images.<br>
-
-          <i>**Demo Coming Soon</i>
-        </p>
-       
-      </section>
-
-      <section>
-        <h3>Project 3: Recommendation System (Gradio, Hugging Face, PyCharm) </h3>
-        <p>
-          Developed an interactive book recommendation system leveraging machine learning and natural language processing to provide personalized suggestions.<br>
-
-          Semantic embeddings: Encoded 5,600+ book descriptions into vector embeddings using pre-trained LLMs, enabling content-aware similarity search.<br>
-
-          Hybrid recommendation: Combined semantic similarity with metadata (genre, author, fiction/non-fiction) for more relevant results.<br>
-
-          Emotion & sentiment analysis: Extracted tones such as suspenseful, joyful, or sad, giving users a new way to filter and explore books.<br>
-
-          Replaced Books without a thumbnail with a placeholder image for better UI consistency.<br>
+          Implemented multiple <b>brush modes</b>, canvas management, and <b>creative filters</b>.<br> 
           
-          Scalable architecture: Efficiently handled thousands of books with real-time inference via vector databases (Chroma).<br>
+          <img src="pages_content/virtual-painter.png" alt="Virtual Painter Attributes" class="placeholder-image" style="max-width: 350px;"> 
 
-          Interactive UI: Built with Gradio, allowing users to enter descriptions or preferences and instantly receive tailored book recommendations.<br>
+          UI integration with a dynamic <b>header bar</b> for color selection and <b>visual feedback</b>.
 
-          Stack: Python 3.11, Pandas, Matplotlib, Transformers, LangChain, Chroma, Hugging Face, Gradio, Jupyter.<br>
+          Image <b>processing</b> & style transfer with <b>OpenCV</b> to apply <b>visual effects</b>.
 
-          Integrated with OpenAI API via .env for semantic search and classification.<br>
-
-          Data sourced from Kaggle, processed with custom cleaning pipelines.<br>
-
-        <div class="video-container">
-          <video controls>
-            <source src="pages_content/book_recommender_vid.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-
-          <p>
-            <a href="https://huggingface.co/spaces/dezziezuok/Book-Recommender/discussions" target="_blank" class="btn-link">
-              Book Recommender Hugging Face Repo
+          Automated saving system for <b>storing</b> completed drawings in <b>.png</b> format.
+          
+          <div class="video-container">
+            <p><i>**Demo Coming Soon**</i></p>
+            <a href="https://github.com/Dezziezuok/AI_Virtual_Painter_OpenCV" target="_blank" class="btn-link">
+              AI Virtual Painter Github Repo
             </a>
-          </p>
-        </div>
+          </div> 
+        </p>
+      </section>
 
+      <section>
+        <h3>Project 2: Book Recommendation System (Gradio, Hugging Face, PyCharm, Goodreads Kaggle Dataset) </h3>
+        <p>
+          Developed an interactive book recommendation system leveraging <b>machine learning</b> and <b>natural language processing</b> to provide <b>personalized</b> suggestions.<br>
+
+          Processed <b>Kaggle</b>-sourced data through custom <b>cleaning pipelines</b> for <b>optimal model performance</b>.<br>
+
+          Encoded <b>5,600+ book descriptions</b> into <b>semantic embeddings</b> using <b>pre-trained LLMs</b>, enabling content-aware <b>similarity search</b>.<br>
+
+          Developed a <b>hybrid recommendation model</b> integrating <b>semantic similarity</b>, <b>metadata</b> (genre, author, fiction/non-fiction), and <b>emotion & sentiment analysis</b> to enable <b>contextual</b> and <b>tone-based</b> book suggestions.<br>
+         
+          Designed a <b>scalable architecture</b> using <b>vector databases</b> (Chroma) for <b>real-time</b> inference across thousands of books.<br>
+
+          Replaced Books without a <b>thumbnail</b> with a <b>placeholder</b> image for better <b>UI consistency</b>.<br>
+          
+          Built an <b>interactive UI</b> with <b>Gradio</b>, enabling users to <b>input</b> descriptions or <b>preferences</b> and receive <b>instant recommendations</b>.<br>
+          
+          Integrated the <b>OpenAI API</b> via .env for <b>semantic search</b> and classification.<br>
+          
+          <b>Stack:</b> Python 3.11, Pandas, Matplotlib, Transformers, LangChain, Chroma, Hugging Face, Gradio, Jupyter.<br>
+
+          <div class="video-container">
+            <video controls>
+              <source src="pages_content/book_recommender_vid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            
+              <a href="https://huggingface.co/spaces/dezziezuok/Intelligent-Book-Recommender" target="_blank" class="btn-link">
+                Desirae's Intelligent Book Recommender
+              </a>
+          </div>
+        </p>
+      </section>
+
+      <section>
+        <h3>Project 3: Drawing Prompt Generator (OpenCV, Mediapipe, Python)</h3>
+        <p>
+          <b>Built an interactive <b>gesture-based</b> drawing game using <b>Python</b>, <b>OpenCV</b> and <b>Mediapipe</b>:</b><br>  
+                    
+          Integrated <b>hand tracking module</b> for gesture <b>detection</b> and <b>fingertip drawing</b> input.<br>
+
+          Designed a game with <b>randomized</b> prompts (cat, robot, pizza, etc), with a <b>30s countdown</b> timer and player(s) draw them in <b>real time</b>. <br>
+
+          Applied <b>image processing techniques</b> to merge drawings with <b>webcam</b> feed.<br>
+
+          Automated <b>storage</b> of player creations by <b>saving</b> canvas output as <b>.png</b> images.<br>
+
+          <div class="video-container">
+            <p><i>**Demo Coming Soon**</i></p>
+            <a href="https://github.com/Dezziezuok/AI_Drawing_Prompt_Game" target="_blank" class="btn-link">
+              Drawing Prompt Generator Github Repo
+            </a>
+          </div>
         </p>
       </section>
 
@@ -107,7 +111,7 @@
 
   <footer>
     <div class="copyright">
-        <p>&copy; dezzie loops. Made by Desirae Zuokumor ♥ 2025.</p>
+        <p>&copy; dezzie dezigns. Made by Desirae Zuokumor ♥ 2025.</p>
     </div>
   </footer>
 </body>

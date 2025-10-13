@@ -93,6 +93,7 @@ html {
       color: #ffffff; /* Color for the header */
       text-align: center; /* Center the text */
       margin-top: 20px; /* Margin from the top */
+      margin-bottom: 40px;
     }
 
     h3 {
@@ -104,9 +105,18 @@ html {
       margin-top: 20px; /* Margin from the top */
     }
 
+    h4 {
+      font-family: Georgia serif; /* Font family for the subheader */
+      font-weight: bold; /* Bold font weight */
+      font-size: 22px; /* Font size for the subheader */
+      color: #ffffff; /* Color for the subheader */
+      text-align: center; /* Center the text */
+      margin-top: 20px; /* Margin from the top */
+    }
+
     p {
       font-family: Georgia serif; /* Font family for the subheader */
-      font-size: 16px; /* Font size for the subheader */
+      font-size: 15px; /* Font size for the subheader */
       color: #ffffff; /* Color for the subheader */
       text-align: center; /* Center the text */
       margin-top: 20px; /* Margin from the top */
@@ -181,7 +191,7 @@ html {
 }
 
 .video-container video {
-  width: 100%;                 /* responsive scaling */
+  width: 90%;                 /* responsive scaling */
   height: auto;                /* keep aspect ratio */
   border-radius: 5px;         /* rounded corners */
   box-shadow: 0 4px 20px rgba(0,0,0,0.2); /* subtle shadow */
@@ -222,7 +232,7 @@ html {
 }
 
 .placeholder-image:hover {
-    transform: scale(1.05);   /* slight zoom on hover */
+    transform: scale(1.025);   /* slight zoom on hover */
     box-shadow: 0 12px 25px rgba(0,0,0,0.4);
 }
 
