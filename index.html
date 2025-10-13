@@ -9,393 +9,462 @@
   <title>Desirae Zuokumor | Personal Portfolio Website</title>
   <link rel="stylesheet" href="./styles.css">
 
-   <!-- Font Awesome icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" >
-
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-  
-      <!-- all your content here (images, nav, portfolio, etc.) -->
-
+  <!-- Butterfly -->
   <div class="butterfly" id="butterfly">
-    <img src="purple_butterfly.png" alt="Butterfly" class="butterfly-image">
+    <img src="images/purple_butterfly.png" alt="Butterfly" class="butterfly-image">
   </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const butterfly = document.getElementById('butterfly'); 
-        
-        document.addEventListener('mousemove', (e) => {
-          butterfly.style.left = `${e.pageX}px`;
-          butterfly.style.top = `${e.pageY}px`;
-
-        });
-      });
-    </script>
-
-  <div class=".page-container">
-
+  <div class="page-container">
     <main>
-
+      <!-- Logo -->
       <div class="logo-container">
-        <img src="dezzieloops.png" alt="Logo" class="logo-image">
+        <img src="images/dezziedezigns.png" alt="Logo" class="logo-image">
       </div>
 
-
+      <!-- Contact button -->
       <div class="contact-container">
         <a href="#contact" class="contact-button">Contact Me</a>
       </div>
 
 
-      <!-- Contain links in the center -->
+      <!-- Navigation -->
       <div class="header-container">
         <nav>
           <!-- open icon -->
           <i class="fa-solid fa-bars" id="up" onclick="openmenu()"></i>
-
-           <!-- close icon -->
-           <i class="fa-solid fa-circle-xmark" id="down" onclick="closemenu()"></i>
+          <!-- close icon -->
+          <i class="fa-solid fa-circle-xmark" id="down" onclick="closemenu()"></i>
 
           <!-- Navigation links -->
           <div class="nav-container" id="sidemenu">
-          
-              <a href="#home" class="nav-link">Home</a>
-              <a href="#about" class="nav-link">About Me</a>
-              <a href="#projects" class="nav-link">Projects</a>
-              <a href="#services" class="nav-link">Services</a>
-              <div class="socials-container">
-                  <!-- LinkedIn -->
-                  <a href="https://www.linkedin.com/in/tamara-etaremi-zuokumor-a86950293" class="social-icon" target="_blank">
-                    <i class="fa-brands fa-linkedin fa-bounce" style="font-size: 2rem; color:#b4abcf"></i>
-                  </a>
-                
-                  <!-- GitHub -->
-                  <a href="https://github.com/Dezziezuok" class="social-icon" target="_blank">
-                    <i class="fa-brands fa-github fa-flip" style="font-size: 2rem; color: #b4abcf;"></i>
-                  </a>
-              </div>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About Me</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <div class="socials-container">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/tamara-etaremi-zuokumor-a86950293" class="social-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin fa-bounce" style="font-size: 2rem; color:#b4abcf"></i>
+              </a>
+              <!-- GitHub -->
+              <a href="https://github.com/Dezziezuok" class="social-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github fa-flip" style="font-size: 2rem; color:#b4abcf"></i>
+              </a>
+            </div>
           </div>
         </nav>
       </div>
-          
-        
-    </main>
-  
-    <div class="portfolio-content">
-      <!-- Portfolio image -->
-      <div class="portfolio-container" class="portfolio-ai">
-        <img src="realportfolioimage.png" class="portfolio-ai">
-      </div>
-
-      <!-- Portfolio quote -->
-      <div class="portfolio-quote-container">
-        <p class="portfolio-quote">&quot;<i>The best time to start investing in yourself was yesterday,
-          <br><br> the second best time is today.</i>&quot;
-          <br><br> ~ My Dad</p>
+    
+    <div class="glitter-banner">
+      <a href="https://www.glitter-graphics.com" target="_blank"></a>
     </div>
 
-    
-      <!-- Home section -->
-      <div class="home-container" id="home">
-        <div class="home-text-container">
-          <div class="home-header">
-            <p>Software Engineer/ Electrical Designer</p>
-            <h1 class="introduction">Hi, I'm </h1>
-            <h1 class="name">Desirae </h1>
-              <h1>an <br> Electrical Engineering and
-              <br> Computer Science Student</h1>
-          </div>
-            <p class="home-text">
-              As an Electrical Engineering Major with a CS Minor, I am passionate about bringing hardware 
-              <br><br>and software together to build innovative, user-centered systems. I’m especially into AI,
-              <br><br>Machine Learning, and anything that helps humans and machines interact more naturally.
-              <br><br><br><br>
-              Currently, I’m doing undergrad research with the Human Technology Interaction Lab at the 
-              <br><br>University of Alabama, working on ways to pair machine learning and hardware to recognize 
-              <br><br>human gestures and movements. 
-              <br><br><br><br>
-              I am always learning, always creating, and always up for a challenge that pushes boundaries.
-              <br><br><br><br><br<br><br><br>
-            </p>
-        </div>
-        <!-- image next to home section -->
-        <div class="home-image">
-          <img src="Crochet Lily Bag_ Crochet Flower Bag.jpg" alt="Portfolio" class="portfolio-image">
-        </div>
+    <!-- Portfolio -->
+    <div class="portfolio-content">
+      <div class="portfolio-container">
+        <img src="images/readinggif.webp" class="portfolio-ai" alt="Portfolio preview">
       </div>
 
-
-      <!-- About me section -->
-      <div class="aboutme-container" id="about">
-        <div class="moreaboutme">
-          
-          <div class="aboutme-header">
-            <h2 class="about-me-header">About Me</h2>
-            <p class="about-me-text">
-              I'm an aspiring software engineer, but beyond the screen, at the heart of everything I do is my 
-              <br><br>faith. As a Christian and Nigerian-American, I carry a strong sense of resilience, and purpose, 
-              <br><br>rooted in faith, cultivated by culture, and driven by the desire to make meaningful impacts.
-              <br><br><br><br>
-              When I’m not buried under books or writing code, you’ll probably find me crocheting something
-              <br><br>cozy, getting a good workout in at the gym, fine-tuning my budget (yes, I <i>genuinely</i> enjoy it), or
-              <br><br> indulging in a little visual inspiration as I scroll through Pinterest. I believe in being
-              <br><br>intentional, showing grit, and finding connections and joy in all that I do.
-              <br><br><br><br>
-              Hence the correlation between coding and crocheting loops— both require creativity, patience, 
-              <br><br>and a love for building something meaningful, one stitch or line at a time.
-            </p>
-          </div>
-
-          <div class="aboutme-section">
-            <p class="aboutme-tabs-text">Here are some of my skills, education, and experience:<br><br></p>
-    
-            <div class="aboutme-tabs">
-              <p class="aboutme-links active-link" onclick="opentab('skills')">Relevant Skills</p>
-              <p class="aboutme-links" onclick="opentab('education')">Education</p>  
-              <p class="aboutme-links" onclick="opentab('experience')">Experience</p>
-            </div>
-            <div class="aboutme-contents active-tab" id="skills">
-              <ul>
-                <li>Python</li><br>
-                <li>C++</li><br>
-                <li>HTML/CSS</li><br>
-                <li>JavaScript</li><br>
-                <li>React</li><br>
-                <li>Node.js</li><br>
-                <li>SQL</li><br>
-              </ul>
-            </div>
-         
-
-            <div class="aboutme-contents" id="education">
-              <ul>
-                <li><span>Attend</span><br> The University of Alabama</li><br>
-                <li><span>Where?</span><br>Tuscaloosa, Alabama</li><br>
-                <li><span>Major</span><br>Electrical Engineering</li><br>
-                <li><span>Minor</span><br>Computer Science</li><br>
-              </ul>
-            </div>
-            <div class="aboutme-contents" id="experience">
-              <ul>
-                <li><span>Work</span><br> Jordan & Skala </li><br>
-                <li><span>Role</span><br>Electrical Engineering </li><br>
-                <li><span>When</span><br>August 2024 - December 2024</li><br>
-                <li>Optimized electrical design processes by applying MEP<br> 
-                  best practices, improving workflows, and conducting accurate panel board calculations.<br>
-                  Enhanced technical skills in AutoCAD and Revit, ensured code compliance through <br>
-                  COMcheck submissions, and bridged communication between technical and non-technical <br>
-                  teams to support successful project execution.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div class="portfolio-quote-container">
+        <p class="portfolio-quote">
+          &quot;<i>The best time to start investing in yourself was yesterday,<br>
+          the second best time is today.</i>&quot;<br> ~ My Father
+        </p>
+        <a>
+          <img src="http://dl3.glitter-graphics.net/pub/2046/2046493yhw0u61tzn.gif" width=50 height=50 border=0>
+        </a>
       </div>
+    </div>
 
+    <!-- Home -->
+    <div class="home-container" id="home">
+      <div class="home-text-container">
+        <div class="home-header">
 
-      <!-- JS for the skills, experience and eucation section of the about me -->
-      <script>
-        var aboutme_links = document.getElementsByClassName("aboutme-links");
-        var aboutme_contents = document.getElementsByClassName("aboutme-contents");
-        
-        function opentab(tabname) {
-          for(aboutme_link of aboutme_links) {
-            aboutme_link.classList.remove("active-link");
-          }
-          for(aboutme_content of aboutme_contents) {
-            aboutme_content.classList.remove("active-tab");
-          }
-          event.currentTarget.classList.add("active-link");
-          document.getElementById(tabname).classList.add("active-tab");
-
-        }
-      </script>
-
-      <!--  Javascript for menu and cloe icon on small phones -->
-      <script>
-        var sidemenu = document.getElementById("sidemenu");
-        var openIcon = document.getElementById("open-icon");
-        var closeIcon = document.getElementById("close-icon");
-      
-        function openmenu() {
-          sidemenu.style.right = "0";
-          openIcon.style.display = "none";
-          closeIcon.style.display = "block";
-        }
-      
-        function closemenu() {
-          sidemenu.style.right = "-200px"; // move it off screen
-          openIcon.style.display = "block";
-          closeIcon.style.display = "none";
-        }
-      </script>
-      
-
-      <!-- Projects section -->
-
-      <div class="projets-container" id="projects">
-        <h2 class="projects-header"><br>Projects</h2>
-        <p class="projects-text">
-          Here are some of the software engineering projects I've worked on: 
-          
-
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          Here are some of the crotcheting projects I've worked on:   
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <p><b class="typing"></b></p>   
+                 
+          <h1 class="introduction">Hi, I'm </h1>
+          <h1 class="name">Desirae</h1>
+          <h1>, an <br> Electrical Engineering and<br> Computer Science Student</h1>
+        </div>
+        <p class="home-text">
+          As an Electrical Engineering major with a minor in Computer Science, I’m passionate about 
+          <b>bridging</b> hardware and software to build <b>intelligent</b>, human-centered systems. My interests 
+          lie especially in <b>Computer Vision</b> & <b>Natural Language Processing</b> Machine Learning, where I explore how machines can 
+          <b>interpret</b> and <b>respond</b> to the world around them.
+          <br><br>
+          Currently, I’m conducting undergraduate research with the <b>Human Technology Interaction Lab</b> 
+          at the University of Alabama, focusing on using computer vision and machine learning techniques 
+          to recognize human gestures and movements through hardware <b>integration</b>. 
+          <br><br>
+          I thrive on challenges that <b>push boundaries</b>, and I’m <b>constantly learning</b>, <b>experimenting</b>, and 
+          <b>creating</b> to advance the way humans and machines interact.
         </p>
       </div>
+      <div class="home-image">
+        <img src="images/pinterest_collage.jpg" alt="Portfolio" class="portfolio-image">
+      </div>
+    </div>
 
-      <!-- Services menu --> 
+    <!-- About -->
+    <div class="aboutme-container" id="about">
+      <div class="moreaboutme">
+        <div class="aboutme-header">
+          <h2>About Me</h2>
+          <p class="about-me-text">
+            I’m an aspiring <b>Machine Learning Engineer</b>, but beyond the algorithms and code, my foundation is <b>faith</b>. 
+            As a <b>Christian</b> and <b>Nigerian-American</b>, my faith shapes how I <b>create</b>, <b>learn</b>, and <b>connect</b>. 
+            It teaches me to approach challenges with <b>purpose</b>, <b>resilience</b>, and <b>curiosity</b>, and to see <b>innovation</b> as a way to <b>serve</b> and <b>inspire</b> others.<br><br>
 
+            My curiosity drives me to explore how <b>technology</b> and <b>art</b> intersect. 
+            Whether I’m <b>experimenting</b> with 3D design, building interactive visuals in <b>TouchDesigner</b>, or composing with <b>Strudel</b>, <b>creative coding</b> has become my favorite way to <b>bring ideas to life</b>.
+            Engineering is <b>deeply</b> creative, and every project becomes an opportunity to build something <b>innovative</b>.<br><br>
+
+            To me, engineering isn’t just about solving problems, it’s about <b>creating</b> experiences that <b>resonate</b>. 
+            Whether I’m <b>building</b> a ML model, <b>designing</b> generative visuals, or <b>sculpting</b> sound, I’m guided by the same <b>spirit</b> of curiosity and <b>intentionality</b> that drives my faith.<br><br>
+
+            Outside of screens and circuits, I find <b>creativity</b> in other forms such as <b>crotcheting</b> cozy patterns, spending time with <b>friends</b> and <b>family</b>, or even fine-tuning my <b>budget</b> finance tracker in Notion.<br><br> 
+            Each thread of my life is connected by a <b>desire to grow</b>, create with <b>intention</b>, and stay <b>true</b> to myself.<br><br>
+
+          </p>
+        </div>
+
+        <div class="aboutme-section">
+          <p class="aboutme-tabs-text">Here are some of my skills, education, and experience:</p>
+
+          <div class="aboutme-tabs">
+            <h4 class="aboutme-links active-link" onclick="opentab('skills')">Education</h4>
+            <h4 class="aboutme-links" onclick="opentab('experience')">Experience</h4>
+            <h4 class="aboutme-links" onclick="opentab('education')">Relevant Skills</h4>
+
+          </div>
+
+          <div class="aboutme-contents active-tab" id="skills">
+            <ul>
+              <li><span>Attend</span><br>The University of Alabama in Tuscaloosa, Alabama</li>
+
+              <li><span>Major</span><br>
+                Bachelor of Science in Electrical Engineering,<br>
+                Minor in Computer Science & Math, Honors College<br>
+
+              <li><span>Relevant Coursework</span><br>
+                Computer Science I (Python), Digital Logic, Electrical Circuits, Calculus I – III,<br>
+                 Differential Equations, Linear Algebra, Statistical Data Analysis, Theory of Probability, <br> 
+                 Physics I – II, Macroeconomics</li>
+
+              <li><span>Awards</span><br>
+                National Recognition Full Tuition Scholarship Recipient (2023)
+              </li>
+
+              <li><span>Active Member of</span><br>
+                ColorStack | Tikkun Olam Makers (RISE & Fall Detection Project) |
+                National Society of Black Engineers (Peer Mentor) | Girls Who Code (Youth Mentoring) |
+                Association of Computing Machinery/Women | AI Club | Society of Women Engineers | Crimson Trade Group |
+                African Student Association
+
+              <li><span>Additional</span><br>
+                Interest in pursuing a Masters Degree in Machine Learning and Artificial Intelligence
+              </li>
+
+            </ul>
+
+            </ul>
+          </div>
+
+          <div class="aboutme-contents" id="education">
+
+          <ul>
+              <li><span>AI/ML Frameworks:</span></li>
+              <li>Python</li>
+              <li>OpenCV</li>
+              <li>TensorFlow.js</li>
+              <li>ml5.js</li>
+              <li>p5.js</li>
+              <li>RAG (Retrieval-Augmented Generation)</li>
+              <li>LlamaIndex</li>
+              <li>Mistral</li>
+              <li>Phi-2</li>
+              <li>Tesseract OCR</li>
+              <li>Paddle OCR</li>
+              <li><span>Programming Languages:</span></li>
+              <li>C++</li>
+              <li>Java</li>
+              <li>C#</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Tailwind CSS</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SQL</li>
+              <li><span>Engineering Tools:</span></li>
+              <li>Unity</li>
+              <li>Strudel</li>
+              <li>Quartus Prime</li>
+              <li>OrCAD</li>
+              <li>Excel</li>
+              <li>Revit</li>
+              <li>AutoCAD</li>
+              <li><span>Design Tools:</span></li>
+              <li>Touchdesigner</li>
+              <li>Adobe Premiere Pro</li>
+              <li>Figma</li>
+            </ul>
+
+          </div>
+
+          <div class="aboutme-contents" id="experience">
+            <ul>
+              <li><span>Undergrad Researcher | Human-Technology Interaction Lab, Dr. Crawford</span><br> 
+               ⟐ Engineered facial, sound, and body pose recognition models using Teachable 
+               <br>Machine, TensorFlow.js, and ml5.js
+               <br><br>⟐ Integrated pre-trained human recognition models with an ESP32 using 
+               <br>C++, connecting sensors and actuators to create interactive robotic prototypes 
+               <br>responding to human movement and gestures, while enhancing AI/ML 
+               <br>deployment skills
+               <br><br>⟐ Presented progress and findings weekly to a 12-member research team, 
+               <br>incorporating detailed feedback from peers and supervisors to refine human 
+               <br>recognition models, enhancing AI/ML accuracy and computational efficiency 
+               <br>by 10–15%
+               <br><span>Feb 2025 – Present, Tuscaloosa</span>
+              </li>
+              <br>
+              <li><span>Extern | Outamation</span><br>
+                ⟐ Built AI-powered pipelines to process 200+ page mortgage documents, integrating 
+                <br>OCR (Tesseract, PaddleOCR), PDF parsing (PyMuPDF), and Retrieval-Augmented 
+                <br>Generation (RAG) forautomated data extraction and search capabilities
+                <br><br>⟐ Optimized document retrieval system using LlamaIndex and open-source 
+                <br>LLMs (Mistral, Phi-2) with chunk tuning and metadata filtering, improving 
+                <br>retrieval accuracy by 18%; and built a custom demo UI to showcase performance
+                <br><br>⟐ Evaluated OCR, RAG retrieval, and routing performance across pipelines, 
+                <br>identifying trade-offs in speed, precision, and scalability; authored a 
+                <br>technical report with benchmarking, deployment strategies, and model choice 
+                <br>recommendations
+                <br><span>August 2025 – Present, Remote</span>
+              </li>
+              <br>
+              <li><span>Software Engineering Intern | AdaVerse</span><br>
+                ⟐ Spearheaded a responsive, mobile-first website for Asset Business Group using 
+                <br>React, TypeScript, and Tailwind CSS, implementing 5+ core pages, 8+ service 
+                <br>subpages, lead capture forms, SEO, analytics, and a secure client portal
+                <br><br>⟐ Analyzed 5+ AI fashion apps and 30+ style categories, compiling features, 
+                <br>keywords, color palettes, and celebrity/style references to build structured 
+                <br>datasets for AI integration into the AdoreAI platform to enhance style 
+                <br>recommendations
+                <br><br>⟐ Crafted 20+ AI outfit prompts and 10+ social captions, organized to 
+                <br>streamline AI-driven content and team workflow
+                <br><span>Apr 2025 – Aug 2025, Remote</span>
+                </li>
+                <br>
+              <li><span>Electrical Designer Co-op | Jordan & Skala Engineers</span><br>
+                ⟐ Constructed and maintained 80+ Excel-based schedules to calculate electrical 
+                <br>loads and power distribution for lighting, mechanical, and specialty equipment, 
+                <br>while providing scaled disconnects across various commercial projects
+                <br><br>⟐ Performed lighting code compliance checks (ComCheck reports), carefully 
+                <br>verifying footcandle levels and energy performance, while supporting the 
+                <br>design, documentation, and review of commercial projects totaling over 1M 
+                <br><br>⟐ Circuited and recorded electrical devices ensuring compliance with IECC, 
+                <br>NEC, and regional codes nationwide
+                <br><span>Aug – Dec 2024 | May – Aug 2025, Houston</span>
+                <br><br>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services -->
     <div class="services-container" id="services">
       <div class="container">
         <h2 class="services-header">My Services</h2>
-        <div class="services-list" id="services">
+        <p>
+          I provide hands-on <b>engineering solutions</b> developed through a range of independent projects <b>beyond</b> the classroom. <br>
+        </p>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-robot"></i>
+            <h5> AI/ML Engineering</h5>
+            <p class="services-text">Here are a few examples of my AI and Machine Learning engineering projects.</p>
+            <a href="pages/ai.html" class="services-link" target="_blank" rel="noopener noreferrer">EXPAND</a>
+          </div>
           <div>
             <i class="fa-solid fa-laptop"></i>
-            <h3>Software Engineering<br>(Machine Learning)</h3>
-            <p class="services-text">
-              Here are some of the Software Engineering Services</p><br>
-              <a href="https://visualgo.net/en" class="services-link" target="blank">EXPAND</a>
-              
+            <h5>Software Engineering</h5>
+            <p class="services-text">Here are a few examples of my Software engineering projects.</p>
+            <a href="pages/software.html" class="services-link" target="_blank" rel="noopener noreferrer">EXPAND</a>
           </div>
           <div>
-            <i class="fa-solid fa-plug"></i>
-            <h3>Electrical<br> MEP Design</h3>
-            <p class="services-text">
-              Here are some of the Electrical Design Services</p><br>
-              <a href="https://www.jordanskala.com/" class="services-link" target="blank">EXPAND</a>
-              
+            <i class="fa-solid fa-gamepad"></i>
+            <h5>Game Development</h5>
+            <p class="services-text">Here are a few examples of my Game Development projects.</p>
+            <a href="pages/game.html" class="services-link" target="_blank" rel="noopener noreferrer">EXPAND</a>
           </div>
-          <div>
-            <i class="fa-solid fa-photo-film"></i>
-            <h3>Audiovisual<br>Production</h3>
-            <p class="services-text">
-              Here are some of my Video Editing Services</p><br>
-              <a href="https://www.adobe.com/creativecloud/campaign/pricing.html?sdid=2FDNCC3M&mv=search&mv2=paidsearch&ef_id=Cj0KCQjw5azABhD1ARIsAA0WFUFPlmfWvMgbkbDOKb_C1jfipKYLxn4IRQNrM68NGruo39-2U3iH2k0aAn9REALw_wcB:G:s&s_kwcid=AL!3085!3!667539960889!e!!g!!adobe%20creative%20cloud!151098760!109927013692&gad_source=1&gbraid=0AAAAAD5r4AwsboccclOYYvO5-lfq3HB7M&gclid=Cj0KCQjw5azABhD1ARIsAA0WFUFPlmfWvMgbkbDOKb_C1jfipKYLxn4IRQNrM68NGruo39-2U3iH2k0aAn9REALw_wcB" class="services-link" target="blank">EXPAND</a>
-              
-          </div>
+        </div><br>
       </div>
     </div>
 
-    </main>
+
+    <!-- Projects -->
+    <div class="projects-container" id="projects">
+      <h2 class="projects-header">Projects</h2><br>
+
+    <div class="group-projects-container">
+      <h4>Community-Driven Initiatives <i class="fa-solid fa-people-group" style="color: #b4abcf;"></i></h4>
+      <p class="projects-text">
+        <a href="pages/community.html" class="group-projects-link" target="_blank" rel="noopener noreferrer">
+          Click this link to view the <b>collaborative</b> projects I’ve worked on.
+        </a>
+      </p>
+    </div>
+
+      <p class="projects-text">
+        Here are some of my personal <b>creative coding</b> projects: <br>
+      </p>
+
+      <div class=" projects-video">
+        <div class="video-container">
+          <video controls>
+            <source src="downloads/music-visualizer - Made with Clipchamp.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <p class="image-caption">
+            <a href="https://desiraes-music-visualizer.netlify.app/" target="_blank"><i>
+               3D Music Visiualizer w/ Three.js ( Atoll by Nia Palm)</i>
+            </a>
+          </p>
+        </div>
+
+        <div class="video-container">
+          <video controls>
+            <source src="downloads/touchdesigner-strudel.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <p class="image-caption">
+            <a href="https://derivative.ca/" target="_blank"><i>
+              Abstract Digital Art w/ TouchDesigner & Strudel</i>
+            </a>
+          </p>
+        </div>
+      </div>
 
 
+      <p class="projects-text">
+        Here are some of my personal projects <b>outside</b> of engineering: <br>
+      </p>
 
-    <!-- Content Me footer at bottom of page-->
+      <div class="projects-images">
+        <div class="painting">
+          <img src="images/structured-duffel-bag.png" alt="Sewing Structured Duffel Bag" class="placeholder-image"> 
+          <p class="image-caption"><i>Designed and Sewn Structured Duffel Bag</i></p>
+        </div>
+        <div class="painting">
+          <img src="images/color-me-mine.png" alt="Color Me Mine Ceramic Painting" class="placeholder-image"> 
+          <p class="image-caption"><i>Color Me Mine Ceramic Painting</i></p>
+        </div>
+        <a href="https://observant-pelican-410.notion.site/Finance-Tracker-27b2b1faa54b806e8306c68a71c8b4f1" target="_blank" class="finance-tracker-link">
+          <div class="finance-tracker">
+              <img src="images/notion-calculator.png" alt="Notion Finance Tracker Template" class="placeholder-image"> 
+              <p class="image-caption"><i>Notion Finance Tracker Template **Falsified Data**</i></p>
+          </div>
+        </a>
+    </div>
+
+      <!-- Dark/Light Mode Toggle -->
+      <button id="theme-toggle" class="theme-toggle">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+
+    <!-- Footer -->
     <footer class="footer" id="contact">
       <div class="footer-content">
         <h2 class="footer-header">Get In Touch</h2>
-        <br>
-        <img src="dezzieloops.png" alt="Logo" class="footer-logo">
-        <br>
-        <p class="footer-text">
-          Feel free to contact and connect with me <br>
-          through my social media platforms!
-        </p>
+        <img src="images/dezziedezigns.png" alt="Logo" class="footer-logo">
+        <p class="footer-text">Feel free to contact and connect with me!</p>
 
-        <!-- socials linked in footer -->
+        <!-- Socials -->
         <div class="social-media-footer">
-
-          <!-- Pinterest -->
-          <a href="https://www.pinterest.com/dezzie128/" class="social-icon" target="_blank">
-            <i class="fa-brands fa-pinterest fa-beat-fade" style="font-size: 1rem; color: #b4abcf;"></i>
+          <a href="https://www.pinterest.com/dezzie128/" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-pinterest fa-beat-fade" style="font-size: 1rem; color:#b4abcf;"></i>
           </a>
-          
-         <!-- LinkedIn -->
-         <a href="https://www.linkedin.com/in/tamara-etaremi-zuokumor-a86950293" class="social-icon" target="_blank">
-          <i class="fa-brands fa-linkedin fa-bounce" style="font-size: 1rem; color: #b4abcf;"></i>
-         </a>
-      
-        <!-- GitHub -->
-         <a href="https://github.com/Dezziezuok" class="social-icon" target="_blank">
-          <i class="fa-brands fa-github fa-flip" style="font-size: 1rem; color: #b4abcf;"></i>
-         </a>
-         <br>
+          <a href="https://www.linkedin.com/in/tamara-etaremi-zuokumor-a86950293" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin fa-bounce" style="font-size: 1rem; color:#b4abcf;"></i>
+          </a>
+          <a href="https://github.com/Dezziezuok" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github fa-flip" style="font-size: 1rem; color:#b4abcf;"></i>
+          </a>
         </div>
-        
-        <!-- link email -->
-        <a href="mailto:tdzuokumor@crimson.ua.edu" class="email-link">
+
+        <!-- Email -->
+        <a href="mailto:tdzuokumor@crimson.ua.edu" class="email-link" target="_blank" rel="noopener noreferrer">
           <i class="fa fa-envelope" style="font-size: 18px; color: #b4abcf;"></i>
           tdzuokumor@crimson.ua.edu
         </a>
 
+        <!-- Contact form -->
+        <div class="message-container">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name">
+            <input type="email" name="Email" placeholder="Your Email">
+            <textarea name="Message" rows="7" placeholder="Your Message ♥"></textarea>
+            <button type="submit" class="submit-button">Submit</button>
+          </form>
+        </div>
+        <a >
+          <img src="http://dl10.glitter-graphics.net/pub/31/31660rlcl5aebuz.gif" width=108 height=108 style="border: 2px solid #b4abcf;">
+        </a>
 
-          <!-- Message box for quick chats -->
-          <div class="message-container">
-            <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your Name ">
-              <input type="email" name="Email" placeholder="Your Email ">
-              <textarea name="Message" rows="7" placeholder="Your Message &#x2665;"></textarea>
-              <button type="submit" class="submit-button" onclick="alert('Form submitted successfully!')">Submit</button>
-            </form>
+        <!-- Resume -->
+        <a href="downloads/Tamara_Desirae_Zuokumor_Fall_2025_Resume.pdf" download class="resume-link" target="_blank" rel="noopener noreferrer">
+          °❀⋆  Download My Resume  ⋆❀°
+        </a>
+
+        <!-- Interactive -->
+        <div class="interactive-container">
+          <div class="input-container">
+            <select id="message" class="text-box">
+              <option value="">Quick! What's your favorite color?</option>
+              <option value="purple">purple</option>
+              <option value="white">white</option>
+              <option value="red">red</option>
+              <option value="blue">blue</option>
+              <option value="purple">purple</option>
+              <option value="green">green</option>
+              <option value="orange">orange</option>
+              <option value="yellow">yellow</option>
+              <option value="pink">pink</option>
+              <option value="purple">purple</option>
+            </select>
           </div>
-
-
-          <!-- Message for color interactive -->
-          <div class="interactive-container">
-            <div class="input-container">
-              <select  id="message" class="text-box">
-                <option value="">what's your favorite color?</option>
-                <option value="purple">purple</option>
-                <option value="white">white</option>
-                <option value="red">red</option>
-                <option value="purple">purple</option>
-                <option value="blue">blue</option>
-                <option value="green">green</option>
-                <option value="orange">orange</option>
-                <option value="yellow">yellow</option>
-                <option value="purple">purple</option>
-                <option value="pink">pink</option>
-              </select>
-            </div>
-
-            <!-- Submission button -->
-            <div class="submit-container">
-              <button class="submit-button" onclick="window.location.href='https://www.thepioneerwoman.com/just-for-fun/g60793573/what-your-favorite-color-says-about-you/'" >
-                reveal
-              </button>
-            </div>
+          <div class="submit-container">
+            <button class="submit-button" onclick="window.open('https://www.thepioneerwoman.com/just-for-fun/g60793573/what-your-favorite-color-says-about-you/', '_blank')" rel="noopener noreferrer">
+              ˚˙✩˙˚
+            </button>
           </div>
+        </div>
+        </main>
 
-          <!-- Download resume -->
-          <a href="DTamara-EtaremiD.Resume.2025.pdf" download class="resume-link" target="_blank">Download My Resume</a>
-          
-          <!-- Copyright at bottom of page -->
-          <div class="copyright">
-            <p>Copyright &copy; dezzie loops. Made by Desirae Zuokumor &#x2764; 2025.</p>
-          </div>
+         
+        <br><br>
 
-      
-
+        <!-- Copyright -->
+        <div class="copyright">
+          <p>Thank you for taking the time to visit my website—I truly appreciate it! &copy; dezzie dezigns. Made by Desirae Zuokumor ♥ 2025.
+          </p>
+        </div>
       </div>
     </footer>
   </div>
 
-  <!-- Google Sheets Contact Form -->
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxoirYcSOpv9UYY01zKFsmBIzNBUpXwelKSiO13wfFI278mlxo61cFlIYUkIUKdoQ9O/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-          msg.innerHTML = "Form sent successfully!"
-          setTimeout(function(){
-            msg.innerHTML = ""
-          }, 3000)
-          form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
-
- 
-  
-
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
+
 </html>
