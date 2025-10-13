@@ -95,7 +95,7 @@ h5 {
 
 p {
   font-family: Georgia, serif;
-  font-size: 16px;
+  font-size: 15px;
   color: white;
   text-align: center;
   margin-top: 20px;
@@ -110,8 +110,9 @@ main {
 /* ===== Light Mode ===== */
 body.light-mode,
 body.light-mode body,
-body.light-mode .page-container,
-body.light-mode html {
+body.light-mode .page-container, 
+body.light-mode html,
+body.light-mode .image-caption a {
   background-color: #ffffff !important;
   color: #2f2239; /* default paragraph/text color */
 }
@@ -363,7 +364,7 @@ body.light-mode .services-text {
       justify-content: space-evenly; /* instead of space-evenly */
       align-items: center;     /* vertical centering if needed */
       flex-wrap: wrap;
-      gap: 25px; /* Space between items */
+      gap: 0px;
     }
 
 
@@ -379,7 +380,7 @@ body.light-mode .services-text {
       align-items: center;       /* center vertically */
       margin: 100px auto 0 auto; /* auto left/right = centers the box */
       width: 100%;
-      width: 500px;
+      width: 450px;
       height: auto;
       background-size: cover;
       background-position: center;
@@ -402,6 +403,19 @@ body.light-mode .services-text {
       transition: transform 0.45s ease; /* Smooth transition */
     }
 
+    .typing {
+      display: inline-block;
+      border-right: 1px solid #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: blink 0.7s step-end infinite;
+      line-height: 2;
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: #ffffff; }
+    }
 
   /* Center buttons */
   .header-container {
@@ -491,7 +505,7 @@ body.light-mode .services-text {
     .home-image {
       margin-top: 40px; /* Margin from the top */
       width: 100%;
-      max-width: 600px;
+      max-width: 500px;
       height: auto;
 
     }
@@ -636,6 +650,7 @@ body.light-mode .services-text {
       text-align: center;
       width: 100%;
       margin: 0 auto;          /* Centers the container itself */
+      margin-top: 5%;
     }
 
     .placeholder-image {
@@ -674,6 +689,59 @@ body.light-mode .services-text {
       font-size: 16px; /* Font size for the links */
     }
 
+    .projects-video {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* space between videos */
+      justify-content: center; /* centers them horizontally */
+    }
+
+    .video-container {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .video-container video {
+      max-height: 225px;
+      width: auto;
+      border-radius: 10px;
+      border-radius: 5px;         /* rounded corners */
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2); /* subtle shadow */
+    }
+
+    .image-caption {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .image-caption a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .group-projects-container {
+      background-color: white;
+      color: #b4abcf; /* applies to all text inside */
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      width: fit-content; /* shrink to content width */
+      margin: 30px auto; /* center the container */
+      border: 2px #2f2239 inline;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional soft shadow */
+    }
+
+    /* Make sure links match the color and transition smoothly */
+    .group-projects-link {
+      color: #b4abcf;
+      text-decoration: underline;
+      transition: color 0.4s ease;
+    }
+
+    .group-projects-link:hover {
+      color: #7d6ea3;
+    }
+
 
     #services {
       padding: 20px 0; /* Padding for the services section */
@@ -707,7 +775,6 @@ body.light-mode .services-text {
       text-align: center; /* Center the text */
       transition: background 0.5s, transform 0.5s; /* Transition for background and transform */
       border: #2f2239 2px solid;
-    
     }
 
     .services-link {
@@ -950,7 +1017,7 @@ body.light-mode .services-text {
       font-size: 18px; /* Font size for the links */
       font-weight: bold; /* Bold font weight */
       text-decoration: underline; /* Underline for the links */
-      margin-top: 7.5%; /* Margin from the top */
+      margin-top: 5%; /* Margin from the top */
       margin-bottom: 5%; /* Margin from the bottom */
       justify-content: center; /* Center the text */
     }
@@ -959,6 +1026,7 @@ body.light-mode .services-text {
       transform: scale(1.1); /* Makes the link 10% bigger */
       transition: transform 0.3s ease; /* Smooth transition for the scaling effect */
     }
+
   .copyright {
     width: 100%;
     overflow: hidden;       /* hides the overflow */

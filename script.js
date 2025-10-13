@@ -33,6 +33,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+  const text = "Electrical Engineer / Software Engineer / Machine Learning Engineer";
+  const typingElement = document.querySelector(".typing");
+
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      typingElement.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, 50); // speed (ms per character)
+    } else {
+      typingElement.style.borderRight = "none"; // remove cursor at end
+    }
+  }
+
+window.onload = type;
+
+
   /* ---------------- Theme toggle (light / dark) ---------------- */
   const themeToggle = document.getElementById('theme-toggle');
   const body = document.body;
@@ -188,53 +205,5 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error!', error.message));
     });
   }
-
-  // click game
-  const startBtn = document.getElementById("startBtn"); // Start Game button
-  const clickPad = document.getElementById("clickPad"); // Clicking pad button
-  const scoreDisplay = document.getElementById("score");
-  const timerDisplay = document.getElementById("timer");
-
-  let score = 0;
-  let timeLeft = 15;
-  let timer;
-
-  // Start the game
-  startBtn.addEventListener("click", () => {
-    score = 0;
-    timeLeft = 15;
-
-    // Reset displays
-    scoreDisplay.innerHTML = "<h5>Score:</h5> " + score;
-    timerDisplay.innerHTML = "<h5>Time Left:</h5> " + timeLeft + "s";
-
-    // Enable the clicking pad
-    clickPad.disabled = false;
-    startBtn.disabled = true;
-
-    // Countdown timer
-    timer = setInterval(() => {
-      timeLeft--;
-      timerDisplay.innerHTML = "<h5>Time Left:</h5> " + timeLeft + "s";
-
-      if (timeLeft <= 0) {
-        clearInterval(timer);
-        clickPad.disabled = true;
-        startBtn.disabled = false;
-        alert("Game Over!💔 You got a hefty score of: " + score);
-      }
-    }, 1000);
-  });
-
-  // Handle clicks on the pad
-  clickPad.addEventListener("click", () => {
-    score++;
-    scoreDisplay.innerHTML = "<h5>Score:</h5> " + score;
-  });
-
-  document.getElementById("score").style.cssText = "font-family: Georgia, serif; font-size: 14px; font-weight: bold; color: #b4abcf;";
-  document.getElementById("timer").style.cssText = "font-family: Georgia, serif; font-size: 14px; font-weight: bold; color: #b4abcf;";
-
-
 
 });
