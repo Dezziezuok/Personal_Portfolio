@@ -406,10 +406,11 @@ body.light-mode .services-text {
     .typing {
       display: inline-block;
       border-right: 1px solid #ffffff;
-      white-space: nowrap;
+      white-space: wrap;
       overflow: hidden;
       animation: blink 0.7s step-end infinite;
       line-height: 2;
+      max-width: 350px;
     }
 
     @keyframes blink {
@@ -432,16 +433,17 @@ body.light-mode .services-text {
       gap: 50px; /* Space between buttons */
       border: none; /* No border */
       padding: 15px !important;
+      box-shadow: 0px 2px 4px #2f2239;      
     }
     
     .nav-link {
       text-decoration: none;
       color: #b4abcf;
       font-size: 24px;
-      font-weight: bold;
+      font-weight:bolder;
       position: relative;
       text-shadow:
-        -1px -1px 0 #ffffff,
+        -2px -2px 0 #ffffff,
         1px -1px 0 #ffffff,
         -1px 1px 0 #ffffff,
         1px 1px 0 #ffffff;
@@ -583,7 +585,7 @@ body.light-mode .services-text {
       margin: 14px 0; /* Margin from the top */
       color: white; /* Text color */
       font-family: Georgia serif; /* Font family for the list items */
-      font-size: 16px; /* Font size for the list items */
+      font-size: 15px; /* Font size for the list items */
       line-height: 1.7; /* Line height for better readability */
       width: 100%;
       max-width: 550px;
@@ -659,13 +661,26 @@ body.light-mode .services-text {
         max-width: 300px;           /* responsive, never bigger than 80% of container */
         height: auto;             /* keeps aspect ratio */
         border-radius: 12px;      /* rounded corners */
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* subtle shadow */
         transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover */
-        border: 2px solid #b4abcf;
+        border: 2px dotted #b4abcf;
     }
 
     .placeholder-image:hover {
-        transform: scale(1.02);   /* slight zoom on hover */
+        transform: scale(1.015);   /* slight zoom on hover */
+    }
+
+    .placeholder-calc {
+        display: block;           /* makes it behave like a block so margin auto works */
+        margin: 20px auto;        /* centers horizontally with some vertical spacing */
+        max-width: 300px;           /* responsive, never bigger than 80% of container */
+        height: auto;             /* keeps aspect ratio */
+        border-radius: 12px;      /* rounded corners */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover */
+        border: 5px ridge #b4abcf;
+    }
+
+    .placeholder-calc:hover {
+        transform: scale(1.025);   /* slight zoom on hover */
     }
 
     .projects-images {
@@ -775,6 +790,8 @@ body.light-mode .services-text {
       text-align: center; /* Center the text */
       transition: background 0.5s, transform 0.5s; /* Transition for background and transform */
       border: #2f2239 2px solid;
+      box-shadow: #2f2239 0 4px 6px; /* subtle shadow */
+
     }
 
     .services-link {

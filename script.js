@@ -1,56 +1,67 @@
-// Butterfly follow effect
+// ---------------- DOMContentLoaded wrapper ---------------- */
 document.addEventListener('DOMContentLoaded', () => {
-  /* ---------------- Butterfly follow effect ---------------- */
+// ---------------- Butterfly follow cursor ---------------- */
   const butterfly = document.getElementById('butterfly');
   if (butterfly) {
-    // ensure it won't capture clicks
-    butterfly.style.pointerEvents = 'none';
-    // use clientX/Y so the position is relative to viewport when using fixed/absolute
-    document.addEventListener('mousemove', (e) => {
+
+     butterfly.style.pointerEvents = 'none';
+
+      document.addEventListener('mousemove', (e) => {
       butterfly.style.left = `${e.clientX}px`;
       butterfly.style.top = `${e.clientY}px`;
     });
   } else {
-    // console.info('butterfly element not found (id="butterfly")');
   }
 
+
+  // ---------------- Sparkle effect on click ---------------- */
   document.addEventListener('click', (e) => {
-  // Create sparkle image
+
   const sparkle = document.createElement('img');
   sparkle.src = "http://dl5.glitter-graphics.net/pub/79/79975yk3ulkvbq5.gif";
   sparkle.className = "sparkle";
   
-  // Position at click point
   sparkle.style.left = `${e.clientX}px`;
   sparkle.style.top = `${e.clientY}px`;
 
-  // Add to page
   document.body.appendChild(sparkle);
 
-  // Remove after animation ends (or 1s fallback)
   sparkle.addEventListener("animationend", () => sparkle.remove());
   setTimeout(() => sparkle.remove(), 1200);
 });
 
 
+// ---------------- Typing effect ---------------- */
   const text = "Electrical Engineer / Software Engineer / Machine Learning Engineer";
   const typingElement = document.querySelector(".typing");
-
   let i = 0;
+  let hasTyped = false; // prevent retyping if scrolled again
+
   function type() {
     if (i < text.length) {
       typingElement.textContent += text.charAt(i);
       i++;
-      setTimeout(type, 50); // speed (ms per character)
+      setTimeout(type, 45);
     } else {
       typingElement.style.borderRight = "none"; // remove cursor at end
     }
   }
 
-window.onload = type;
+  // Use Intersection Observer to trigger typing when visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasTyped) {
+        hasTyped = true;
+        type();
+      }
+    });
+  }, { threshold: 0.5 }); // 0.5 means start when 50% of element is visible
+
+  observer.observe(typingElement);
 
 
-  /* ---------------- Theme toggle (light / dark) ---------------- */
+
+// ---------------- Theme toggle (dark/light) ---------------- */
   const themeToggle = document.getElementById('theme-toggle');
   const body = document.body;
 
@@ -156,9 +167,8 @@ window.onload = type;
     showTabByName(tabName, clicked);
   };
 
-  /* ---------------- Menu open/close for small screens ----------------
-     Your HTML uses icons with id="up" and id="down". This code will show/hide sidemenu.
-  --------------------------------------------------------------------- */
+
+  // ---------------- Side menu toggle ---------------- */
   const sidemenu = document.getElementById('sidemenu');
   const upIcon = document.getElementById('up');   // bars
   const downIcon = document.getElementById('down'); // close

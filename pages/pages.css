@@ -195,7 +195,7 @@ html {
   height: auto;                /* keep aspect ratio */
   border-radius: 5px;         /* rounded corners */
   box-shadow: 0 4px 20px rgba(0,0,0,0.2); /* subtle shadow */
-  border: 2px solid #ffffff; /* white border */
+  border: 5px groove #ffffff; /* white border */
 }
 
 .btn-link {
@@ -217,23 +217,28 @@ html {
     max-width: 80%;           /* responsive, never bigger than 80% of container */
     height: auto;             /* keeps aspect ratio */
     border-radius: 12px;      /* rounded corners */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover */
-}
-
-.pomodoro-image {
-    display: block;           /* makes it behave like a block so margin auto works */
-    margin: 20px auto;        /* centers horizontally with some vertical spacing */
-    max-width: 50%;           /* responsive, never bigger than 80% of container */
-    height: auto;             /* keeps aspect ratio */
-    border-radius: 12px;      /* rounded corners */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* subtle shadow */
+    box-shadow: #2f2239 0 4px 6px; /* subtle shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover */
 }
 
 .placeholder-image:hover {
     transform: scale(1.025);   /* slight zoom on hover */
-    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+    box-shadow: #2f2239 0 12px 25px;
+}
+
+  .pomodoro-image {
+    display: block;           /* makes it behave like a block so margin auto works */
+    margin: 20px auto;        /* centers horizontally with some vertical spacing */
+    max-width: 50%;           /* responsive, never bigger than 80% of container */
+    height: auto;             /* keeps aspect ratio */
+    border-radius: 12px;      /* rounded corners */
+    box-shadow: #2f2239 0 4px 6px; /* subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth hover */
+}
+
+.pomodoro-image:hover {
+    transform: scale(1.025);   /* slight zoom on hover */
+    box-shadow: #2f2239 0 12px 25px;
 }
 
     footer {
